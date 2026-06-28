@@ -1,6 +1,6 @@
 version:
   min_required_version: 3.3.3
-  current_version: 3.4.2
+  current_version: 3.4.3
   latest_program_version: 3.4.1
   update_url: https://github.com/Moonholder/Wuwa_Mod_Fixer/releases/latest
   support_url_cn: https://support.jix.de5.net
@@ -38,6 +38,7 @@ lang:
       * 修复秋水并添加可应用稳定纹理
       * 修复洛瑟菈NPC/角色界面
       * 更新UID的哈希值
+      * 添加了露西和丽贝卡的画面细节中/高的贴图hash
 
     en: |+
       Fix 3.4: Please update XXMI to the latest version.
@@ -45,7 +46,8 @@ lang:
       * Fix Brant's texture error
       * Fix Aalto and add stable textures
       * Fix Lucilla NPC/Character Interface
-      * Update UID Hashes
+      * Updated UID Hashes
+      * Added Lucy and Rebecca's LOD Bias Medium/High texture hashes
 
   intro_note:
     zh: 确保光追已关闭。若 Engine.ini 中存在 r.RayTracing.LoadConfig，必须将其设为 0，否则面部会出错
@@ -1104,6 +1106,31 @@ characters:
       8e20c909: {replace: [347a41a2], derive: {LOD: [537f572e, 2d50f344]}}
       b5453395: {replace: [17372a89]}
       47df9d42: {replace: [f45cea79], derive: {LOD: [9a800365, eccd0754]}}
+  Lucy:
+    main_hashes:
+      - {old: [aceabae4], new: aceabae4}
+    textures:
+      1d3b6ac3: {derive: {LOD: [9b6dafc7,2adc3ad1]}}
+      3ec464d6: {derive: {LOD: [e39bfaf1,8959790f]}}
+      6b08fa32: {derive: {LOD: [f92e24ff,be8ad810]}}
+      8ee998a5: {derive: {LOD: [53b60682,657e7f0c]}}
+      61d030fe: {derive: {LOD: [bc8faed9,f79b4005]}}
+      87ec03a0: {derive: {LOD: [5ab39d87,c246f560]}}
+      591d2f58: {derive: {LOD: [cb3bf195,9b62e119]}}
+      4902b75b: {derive: {LOD: [945d297c,57b62470]}}
+      8721353c: {derive: {LOD: [5a7eab1b,17e4df90]}}
+      a7ff688a: {derive: {LOD: [7aa0f6ad,08212d96]}}
+      ad0a15a6: {derive: {LOD: [70558b81,3f1e7e7d]}}
+      aefb0e16: {derive: {LOD: [73a49031,aaaafa88]}}
+      b38bb321: {derive: {LOD: [6ed42d06,6a952fef]}}
+      bac050f3: {derive: {LOD: [679fced4,5aae5fad]}}
+      c49ebd0f: {derive: {LOD: [19c12328,77e7b4b1]}}
+      c403e69d: {derive: {LOD: [195c78ba,d1943dac]}}
+      db20f236: {derive: {LOD: [81edcd6a,7e616169]}}
+      e55abaa5: {derive: {LOD: [38052482,c4801840]}}
+      e8262969: {derive: {LOD: [3579b74e,87729fa3]}}
+      ed441ea0: {derive: {LOD: [7f62c06d,daf1f52f]}}
+      f2ad37a7: {derive: {LOD: [2ff2a980,05ff2cdb]}}
   Mornye:
     main_hashes:
       - {old: [691e4f5f], new: 691e4f5f}
@@ -1304,6 +1331,32 @@ characters:
       5606456f: {meta: {id: '3', type: 'D'}, replace: [db7ba06b], derive: {LOD: [8b59db48, 18a5098b]}}
       756ab255: {meta: {id: '3', type: 'N'}, replace: [13bc29e0], derive: {LOD: [a8352c72, 9bc4cdc9]}}
       6913dea1: {meta: {id: '4', type: 'D'}, replace: [56343b28], derive: {LOD: [b44c4086, 564607b9]}}
+  Rebecca:
+    main_hashes:
+      - {old: [aed00161], new: aed00161}
+      - {old: [e082ca87], new: e082ca87}
+      - {old: [99ec9b61], new: 99ec9b61}
+    textures:
+      1a2c2002: {derive: {LOD: [880afecf,ef8ec858]}}
+      3a0ebb30: {derive: {LOD: [e7512517,3e421f53]}}
+      6dcfc4fa: {derive: {LOD: [b0905add,919bc1dd]}}
+      08d7f224: {derive: {LOD: [8e813720,ee1876a6]}}
+      8d22ec96: {derive: {LOD: [507d72b1,ed1e7307]}}
+      42feca9f: {derive: {LOD: [9fa154b8,e518783c]}}
+      47f5f4ba: {derive: {LOD: [9aaa6a9d,3b70f2f8]}}
+      94d86c34: {derive: {LOD: [4987f213,733f7388]}}
+      768f8f35: {derive: {LOD: [abd01112,1e13fae4]}}
+      26075d8a: {derive: {LOD: [fb58c3ad,e16af9ec]}}
+      3762703e: {derive: {LOD: [ea3dee19,f7bd4abe]}}
+      31499105: {derive: {LOD: [cec160f2,4c39d03c]}}
+      a54ef129: {derive: {LOD: [78116f0e,a77d3ec5]}}
+      e6c846f5: {derive: {LOD: [3b97d8d2,7277f5f3]}}
+      e488ea8b: {derive: {LOD: [39d774ac,ae2b1046]}}
+      ed2f1c83: {derive: {LOD: [7f09c24e,33496ad2]}}
+      f9e2e907: {derive: {LOD: [7fb42c03,76b898bd]}}
+      f5905e31: {derive: {LOD: [28cfc016,0c9c4f0d]}}
+      f30928d8: {derive: {LOD: [2e56b6ff,bd49f635]}}
+      fcb2aea7: {derive: {LOD: [21ed3080,46ad6078]}}
   Sanhua:
     main_hashes:
       - {old: [33e4890f], new: 33e4890f}
