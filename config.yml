@@ -1,6 +1,6 @@
 version:
   min_required_version: 3.3.3
-  current_version: 3.4.4
+  current_version: 3.5.0
   latest_program_version: 3.4.1
   update_url: https://github.com/Moonholder/Wuwa_Mod_Fixer/releases/latest
   support_url_cn: https://support.jix.de5.net
@@ -32,22 +32,18 @@ lang:
       version.
   intro:
     zh: |+
-      修复3.4: 请将XXMI更新至最新版本
-      * 修复漂泊者
-      * 修复布兰特的贴图错误
-      * 修复秋水并添加可应用稳定纹理
-      * 修复洛瑟菈NPC/角色界面
-      * 更新UID的哈希值
-      * 添加了露西和丽贝卡的画面细节中/高的贴图hash
+      修复3.5: 请将XXMI更新至最新版本
+      * Augusta、Camellya、Cantarella、Cartethyia/Fleurdelys、Changli、Chisa
+      * Ciaccona、Denia、Encore、Galbrena、Hiyuki、Iuno
+      * Lupa、Lynae、Phrolova、Roccia、Shorekeeper、Verina、Zani
+      * 包含已验证的变身、潮湿、透明、武器和特效状态修复
 
     en: |+
-      Fix 3.4: Please update XXMI to the latest version.
-      * Fix Rover
-      * Fix Brant's texture error
-      * Fix Aalto and add stable textures
-      * Fix Lucilla NPC/Character Interface
-      * Updated UID Hashes
-      * Added Lucy and Rebecca's LOD Bias Medium/High texture hashes
+      Fix 3.5: Please update XXMI to the latest version.
+      * Augusta, Camellya, Cantarella, Cartethyia/Fleurdelys, Changli, Chisa
+      * Ciaccona, Denia, Encore, Galbrena, Hiyuki, Iuno
+      * Lupa, Lynae, Phrolova, Roccia, Shorekeeper, Verina, Zani
+      * Includes verified transformation, wet, transparency, weapon, and effect-state fixes
 
   intro_note:
     zh: 确保光追已关闭。若 Engine.ini 中存在 r.RayTracing.LoadConfig，必须将其设为 0，否则面部会出错
@@ -227,17 +223,31 @@ characters:
     main_hashes:
       - {old: [c7aae00c], new: c7aae00c}
     textures:
-      36d75345: {derive: {LOD: [55acf234]}}
-      c2492522: {derive: {LOD: [ae4ae6e7]}}
-      3153462b: {derive: {LOD: [87698b47]}}
-      d7d7a406: {derive: {LOD: [e6133305]}}
-      c613797e: {derive: {LOD: [542429bb]}}
-      0136425d: {derive: {LOD: [2d27097b]}}
-      8d61b0da: {derive: {LOD: [db5d2f4e]}}
-      c596dbd6: {derive: {LOD: [f967609a]}}
-      06299d10: {derive: {LOD: [f350af57]}}
-      b6c382a8: {derive: {LOD: [6e4b6a73]}}
-      2066c564: {derive: {LOD: [dc4bd5c5]}}
+      663798c2: {replace: [2d5efbf5]}
+      2cfea8fa: {replace: [36d75345, 55acf234]}
+      '46954522': {replace: [fc0d8d76]}
+      8d93c625: {replace: [8d61b0da, db5d2f4e]}
+      bb73967a: {replace: [f47bc395]}
+      24d13e57: {replace: [d313d349]}
+      d5d94019: {replace: [3153462b, 87698b47]}
+      0b641668: {replace: [985701bc]}
+      84cdcd1d: {replace: [68e90221]}
+      2cea42cc: {replace: [ab78b97e]}
+      adb8fb68: {replace: [c2492522, ae4ae6e7]}
+      a506a70d: {replace: [8383cbbf]}
+      57de363d: {replace: [06299d10, f350af57]}
+      742c5c7b: {replace: [21f813ba]}
+      195827cb: {replace: [93d4bc23]}
+      fd68a837: {replace: [d7d7a406, e6133305]}
+      f307e354: {replace: [2066c564, dc4bd5c5]}
+      f03b44bb: {replace: [c0044934]}
+      7b6d3c0b: {replace: [c613797e, 542429bb]}
+      457778b1: {replace: [c596dbd6, f967609a]}
+      00fe591d: {replace: [edab99db]}
+      5e3b6d6f: {replace: [0136425d, 2d27097b]}
+      9f7b1ec6: {replace: [7d4edaf8]}
+      feb4d9c5: {replace: [41558879]}
+      84e60f8f: {replace: [b6c382a8, 6e4b6a73]}
   Baizhi:
     main_hashes:
       - {old: [4a2b2eca], new: 3cb91e7f}
@@ -344,56 +354,57 @@ characters:
     main_hashes:
       - {old: [7748c1d8], new: 7748c1d8}
     textures:
-      b4355151: {replace: [6ce51d7a]}
-      422a50e2: {replace: [fc743d45]}
-      fed8469a: {replace: [3a299182]}
-      26e023bb: {replace: [0f14fc34]}
-      4cbab190: {replace: [faf8f2ae]}
-      d8a26ff8: {replace: [5d4de02b]}
-      277dcf73: {replace: [212d1d6a]}
-      9b03ba8c: {replace: [830aecff]}
+      5a9e1b32: {replace: [b4355151, 6ce51d7a]}
+      4aeb1899: {replace: [422a50e2, fc743d45]}
+      6ff3ee98: {replace: [fed8469a, 3a299182]}
+      21c818e8: {replace: [26e023bb, 0f14fc34]}
+      d3c25884: {replace: [4cbab190, faf8f2ae]}
+      4a267043: {replace: [d8a26ff8, 5d4de02b]}
+      47ae7506: {replace: [277dcf73, 212d1d6a]}
+      c3e86a78: {replace: [9b03ba8c, 830aecff]}
+      af6c88fe: {replace: [29fedfbc]}
+      f2903153: {replace: [e299e4ca, edfe74f8]}
+      14113607: {replace: [ab012b35]}
+      9efe040e: {replace: [9f6eaf2e]}
+      742c5c7b: {replace: [21f813ba]}
+      a506a70d: {replace: [8383cbbf]}
+      3e171584: {replace: [e04dea55]}
+      bb73967a: {replace: [f47bc395, 5019e88f]}
       4f357454: {replace: [5f4e6f09]}
-      e299e4ca: {replace: [edfe74f8]}
-      afadfdbd: {replace: [837c1b30]}
+      f0c34a19: {replace: [afadfdbd, 837c1b30]}
   Cantarella:
     main_hashes:
       - {old: [5432f939], new: 5432f939}
     textures:
-      3ebe428b: {meta: {id: '0', type: D}, replace: [d789c54e], derive: {wet: [b4b8de71, '69e74056', ba88e9da], LOD: [e3e1dcac, b53ee9cd]}}
-      91bf0adb: {meta: {id: '0', type: L}, replace: [40e95d0b]}
-      b8fe5f0a: {meta: {id: '1', type: D}, replace: [c93ea25b], derive: {wet: [f6c26213, 2b9dfc34, a97743cc], LOD: [65a1c12d, cd874f25]}}
-      87b19749: {meta: {id: '1', type: L}, replace: [2091f4e1]}
-      f7dadc16: {meta: {id: '2', type: D}, replace: [87821a93], derive: {wet: [d0429c4a, 0d1d026d, f9cf36b0]}}
-      0c868365: {meta: {id: '2', type: L}}
-      787c92b8: {meta: {id: '3', type: D}, replace: [812ba53f], derive: {wet: [8f3ebd32, '52612315', 411dfe13], LOD: [a5230c9f, 583b6efd]}}
-      22ba1d3e: {meta: {id: '3', type: L}, derive: {LOD: [ffe58319, d6b8c7c3]}}
-      3cda6614: {meta: {id: '3', type: 'N'}, replace: [94a9c5e1], derive: {LOD: [e185f833, 216b2dcf]}}
-      b6deb6c2: {meta: {id: '4', type: D}, replace: [35c01267, 734ad993], derive: {wet: [abd93fa3, 7686a184, f068f7d9], LOD: [6b8128e5, 03af6ae8]}}
-      89e2bbf1: {meta: {id: '4', type: L}}
-      0480d129: {meta: {id: '4', type: 'N'}, replace: [0fce3633, 59c7c460], derive: {LOD: [d9df4f0e, 14cb399b]}}
-      9986ce50: {meta: {id: '5', type: D}, replace: [dc14e209], derive: {wet: [c3902379, 1ecfbd5e, 5d8ed2ab], LOD: [44d95077, fb796792]}}
-      8ecda31a: {meta: {id: '5', type: L}}
-      b00d33d6: {meta: {id: '5', type: 'N'}, replace: ['73360451'], derive: {LOD: [6d52adf1, ceb2d116]}}
-      5bbb1f80: {meta: {id: '6', type: D}, replace: [5db1989d], derive: {LOD: [86e481a7, 3c27f5d1]}}
-      76a3b6f4: {meta: {id: '7', type: D}, replace: [dcb62fb6], derive: {LOD: [abfc28d3, 4b922cb0]}}
+      f8a325ca: {meta: {id: '0', type: D}, replace: [3ebe428b, d789c54e], derive: {wet: [3f69452a]}}
+      3e8c6fa3: {meta: {id: '0', type: L}, replace: [91bf0adb, 40e95d0b]}
+      829922e0: {meta: {id: '1', type: D}, replace: [b8fe5f0a, c93ea25b], derive: {wet: [22e3b291]}}
+      0b530efe: {meta: {id: '1', type: L}, replace: [87b19749, 2091f4e1]}
+      c5961a74: {meta: {id: '2', type: D}, replace: [f7dadc16, 87821a93], derive: {wet: [d47fe0d2]}}
+      91fca2ee: {meta: {id: '2', type: L}, replace: [0c868365]}
+      a506a70d: {replace: [8383cbbf]}
+      12fc02d8: {meta: {id: '3', type: 'N'}, replace: [3cda6614, 94a9c5e1]}
+      4edca488: {meta: {id: '3', type: L}, replace: [22ba1d3e]}
+      9120962f: {meta: {id: '3', type: D}, replace: [787c92b8, 812ba53f], derive: {wet: [d5324e01]}}
+      51128274: {meta: {id: '4', type: 'N'}, replace: [0480d129, 0fce3633, 59c7c460]}
+      64dec387: {meta: {id: '4', type: L}, replace: [89e2bbf1]}
+      86d58b2c: {meta: {id: '4', type: D}, replace: [b6deb6c2, 35c01267, 734ad993], derive: {wet: [58d8d40a]}}
+      c3b48b20: {meta: {id: '5', type: 'N'}, replace: [b00d33d6, '73360451']}
+      f7eeb7f1: {meta: {id: '5', type: L}, replace: [8ecda31a]}
+      0e311b14: {meta: {id: '5', type: D}, replace: [9986ce50, dc14e209], derive: {wet: [ca852a8d]}}
+      3326d604: {meta: {id: '6', type: D}, replace: [5bbb1f80, 5db1989d]}
+      4c14f703: {meta: {id: '7', type: 'N'}, replace: [5fb46aac, 83a99602]}
       9a126c64: {meta: {id: '7', type: L}}
-      5fb46aac: {meta: {id: '7', type: 'N'}, derive: {LOD: [82ebf48b, 951f7010]}}
-      e3127902: {replace: [01c122b3]}
-      abd93fa3: {replace: ['354e8743', 801b4344, a2f54eec]}
-      a9b4d269: {replace: [28105b41, 884dc2c3, 3ea27f2c]}
-      62a665e3: {replace: [797bc768]}
-      8f3ebd32: {replace: [5cfb3cbc]}
-      ad7c2fad: {replace: [7423d5d0]}
-      b4b8de71: {replace: [5e48f2a4]}
-      f6c26213: {replace: [ef3dab0e]}
-      c3902379: {replace: [d67890aa]}
-      d0429c4a: {replace: [a01a5acf]}
+      02eb17d9: {meta: {id: '7', type: D}, replace: [76a3b6f4, dcb62fb6]}
+      9efe040e: {replace: [9f6eaf2e]}
+      bb73967a: {replace: [f47bc395, 5019e88f]}
   Cantarella_Umbrella:
     main_hashes:
       - {old: [2005ef51], new: 2005ef51}
     textures:
-      52a54db3: {replace: [093cb526]}
-      310a0a6a: {replace: [daed0b06]}
+      d9397a9d: {replace: [52a54db3, 093cb526]}
+      db65a23b: {replace: [310a0a6a, daed0b06]}
+      bb73967a: {replace: [f47bc395, 5019e88f]}
   Carlotta:
     main_hashes:
       - {old: [4ba716ae], new: 4ba716ae}
@@ -457,59 +468,69 @@ characters:
       9a586aa6: {replace: [e08e17b5]}
       b9590b12: {replace: [bfd19633]}
       5b9e0c57: {replace: [58037f6f]}
-      083564da: {meta: {id: '0', type: D}, replace: [8d9954bf], derive: {LOD: [9a13ba17, b3d7f302]}}
-      b8b55682: {meta: {id: '0', type: L}, replace: [fb32025d]}
-      5ca9b4f0: {meta: {id: '1', type: D}, replace: [3ff8b56e], derive: {LOD: [81f62ad7, 31ca3614]}}
-      6b7fb28f: {meta: {id: '1', type: L}, replace: [d10e2ae1]}
-      51638d38: {replace: [037e710d], derive: {LOD: [8c3c131f, 16f9f4af]}}
-      ecc1c90a: {meta: {id: '3', type: D}, replace: [5ca9f916, 59d89437, 423ec9ce], derive: {LOD: [319e572d, a7c10722]}}
-      f953f385: {meta: {id: '3', type: L}, replace: [7ef7dba9]}
-      a6ac08f5: {meta: {id: '3', type: 'N'}, replace: [7f08cd4f], derive: {LOD: [7bf396d2, e25b39a2]}}
-      fec2f60b: {meta: {id: '4', type: D}, replace: [b5ce9d77, fd0268ad], derive: {LOD: [239d682c, 6607984f]}}
-      a8b86995: {meta: {id: '4', type: 'N'}, replace: [2a69362a, 052142b5], derive: {LOD: [75e7f7b2, ae3a12f8]}}
-      6c7cc5cc: {meta: {id: '5', type: D}, replace: [ae8fd5fb], derive: {LOD: [b1235beb, 9ea67542]}}
-      18228dc3: {meta: {id: '5', type: 'N'}, replace: [b0d30838], derive: {LOD: [c57d13e4, a96dedb9]}}
-      acfd6fe0: {replace: [241a6fbe], derive: {LOD: [71a2f1c7, 263980eb]}}
-      b2e6f707: {meta: {id: '7', type: D}, replace: [1f426e73], derive: {LOD: [6fb96920, '487e1960']}}
-      ffbd8eee: {meta: {id: '7', type: 'N'}, replace: [c5b7aee2], derive: {LOD: [22e210c9, 809051f1]}}
-      d98578ec: {replace: [64cd06f9], derive: {LOD: [04dae6cb, 9ae571bf]}}
-      5ec1f4de: {replace: [c17eb9f5], derive: {LOD: [cce72a13, 55097beb]}}
-      803452b8: {replace: [923d8c06], derive: {LOD: [12128c75, 0e52eaaf]}}
-      c3235f6a: {replace: [f69958a2], derive: {LOD: [510581a7, 5fbd9a58]}}
+      0bfd71fc: {meta: {id: '0', type: D}, replace: [d98578ec, 64cd06f9], derive: {LOD: [d4d72003]}}
+      2c6b9405: {replace: ['083564da', 8d9954bf]}
+      f80dca17: {meta: {id: '0', type: L}, replace: [b8b55682, fb32025d]}
+      6189a189: {meta: {id: '1', type: D}, replace: [5ca9b4f0, 3ff8b56e], derive: {LOD: [3e3bc6a6]}}
+      67eb6f03: {meta: {id: '1', type: L}, replace: [6b7fb28f, d10e2ae1]}
+      7894424a: {replace: [5ec1f4de, c17eb9f5]}
+      26d8f229: {replace: [2d14e92d], derive: {LOD: [8f310a24]}}
+      fef783fb: {replace: [51638d38, 037e710d], derive: {LOD: [eb8fdbfc]}}
+      96902086: {replace: [8e7433fa], derive: {LOD: [2327df4b]}}
+      c8ecd107: {meta: {id: '3', type: D}, replace: [ecc1c90a, 5ca9f916, 59d89437, 423ec9ce], derive: {LOD: [95343036]}}
+      275b841b: {meta: {id: '3', type: L}, replace: [f953f385, 7ef7dba9]}
+      144d8d73: {meta: {id: '3', type: 'N'}, replace: [a6ac08f5, 7f08cd4f], derive: {LOD: [90b66a83]}}
+      09da28b2: {replace: [803452b8, 923d8c06]}
+      276a2bc6: {meta: {id: '4', type: D}, replace: [fec2f60b, b5ce9d77, fd0268ad], derive: {LOD: [501d1815]}}
+      8e0a2541: {meta: {id: '4', type: 'N'}, replace: [a8b86995, 2a69362a, 052142b5], derive: {LOD: [d1296afa]}}
+      6c73e07c: {replace: [c3235f6a, f69958a2]}
+      6cae605b: {meta: {id: '5', type: D}, replace: [6c7cc5cc, ae8fd5fb], derive: {LOD: [d3fd800f]}}
+      51788135: {meta: {id: '5', type: 'N'}, replace: [18228dc3, b0d30838], derive: {LOD: [1bea3d0d]}}
+      4089b1fa: {replace: [acfd6fe0, 241a6fbe], derive: {LOD: [ff1749ae]}}
+      99f424b5: {meta: {id: '7', type: D}, replace: [b2e6f707, 1f426e73], derive: {LOD: [e8b2bdad]}}
+      ec5ce39a: {meta: {id: '7', type: 'N'}, replace: [ffbd8eee, c5b7aee2], derive: {LOD: [74021456]}}
+      a506a70d: {replace: [8383cbbf]}
+      0e0a5c3a: {replace: [83537519]}
   Changli:
     main_hashes:
       - {old: ['77975500', 5f8aac45], new: d14bed8b}
       - {old: [d8decbca, 1ccb8008], new: 59f24b66}
       - {old: [fd9483ca, 060f5303], new: 277e18c9}
     rules:
+      - {line_prefix: global $object_guid, replacements: [{old: ['285591'], new: '286611'}]}
       - {line_prefix: match_first_index, replacements: [{old: ['152343'], new: '153363'}, {old: ['198855'], new: '199875'}, {old: ['283461'], new: '284481'}, {old: ['285489'], new: '286509'}]}
       - {line_prefix: match_index_count, replacements: [{old: ['81513'], new: '82533'}]}
     vg_remaps:
       - {trigger_hash: [fd9483ca], component_remap: [{component_index: '5', indices: '9:23,11:28,12:10,13:11,14:12,15:13,16:14,17:15,18:16,19:17,20:18,21:19,22:20,23:21,24:22,25:23,26:24,27:25,28:26,29:27,30:29,31:30,32:31,33:32,34:33,35:34,36:35,37:36,38:37,39:38,40:39,41:40,42:41,43:42,44:43,45:44,46:45,47:46'}]}
       - {trigger_hash: [060f5303], vertex_groups: '123:124,124:125,125:126,126:123,135:137,137:135', component_remap: [{component_index: '3', indices: '64:65,65:66,66:67,67:64,76:78,78:76'}]}
     textures:
-      '69994531': {replace: [8f067708, f23483e3], derive: {LOD: [b4c6db16, 4c62d63b]}}
-      a97f587b: {replace: [c79a4ccb, 225aad5a], derive: {LOD: [7420c65c, 6881ae04]}}
-      25e6decf: {replace: [8094e3ca]}
-      89da6405: {replace: [d6f4003a], derive: {LOD: [5485fa22, 765fda54]}}
-      3e6d3c8e: {replace: [a45bfe26], derive: {LOD: [e332a2a9, 82aad79c]}}
-      0484ab73: {replace: [6f7a2dab], derive: {LOD: [d9db3554, 5ec99b00]}}
-      798ec300: {replace: [92c11772]}
-      9a3f146d: {replace: [b54a043e], derive: {LOD: [47608a4a, cbd95a32]}}
-      c0f0b1e1: {replace: [e0b2f0d3], derive: {LOD: [52d66f2c, b712b435]}}
-      5ed7e436: {replace: [8a125464]}
-      3ff7cad2: {replace: [dfe134cd]}
-      ee867ac2: {replace: [00e5703f], derive: {LOD: [33d9e4e5, 5d068c47]}}
-      4da65048: {replace: [998bc53c]}
-      e047ea9c: {replace: [2782d638]}
-      258c919f: {replace: [c02dbf56], derive: {LOD: [f8d30fb8, 57fd0a1d]}}
-      59b52b44: {replace: [f98c7e7c], derive: {LOD: [84eab563, 815e4e56]}}
-      1bc98900: {replace: [eb70f116], derive: {LOD: [c6961727, 76c338af]}}
-      8407b021: {replace: [a260e7f7], derive: {LOD: ['59582e06', d4ef5c66]}}
-      fde34d42: {replace: [1d3ad29f]}
-      7eb470fc: {replace: [5fff67ee]}
-      0af29cfb: {derive: {LOD: [85073c94, 0af29cfb]}}
-      fcec9218: {derive: {LOD: [6eca4cd5, 97b0c854]}}
+      b7627bb3: {replace: [fcec9218]}
+      06fbc0a7: {replace: [5fff67ee, 7eb470fc]}
+      9fe2ded0: {replace: [8094e3ca, 25e6decf], derive: {LOD: [9f4533ec, 96177e42]}}
+      de12a09a: {replace: [d6f4003a, 89da6405], derive: {LOD: [83b72922, 259c280f]}}
+      9efe040e: {replace: [9f6eaf2e]}
+      bb73967a: {replace: [f47bc395]}
+      a506a70d: {replace: [8383cbbf]}
+      8b0bbdb6: {replace: [1d3ad29f, fde34d42]}
+      fcf01372: {replace: [6f7a2dab, 0484ab73], derive: {LOD: [df668a86]}}
+      95f82f8f: {replace: [92c11772, 798ec300]}
+      3800a5cc: {replace: [b54a043e, 9a3f146d], derive: {LOD: [46fdf86f]}}
+      b65684d3: {replace: [e0b2f0d3, c0f0b1e1]}
+      e0fa653e: {replace: [05187cd9], derive: {LOD: [fbfee0ea]}}
+      61b14e87: {replace: [c79a4ccb, 225aad5a, a97f587b], derive: {LOD: [9c00454a, eefe376d]}}
+      0a1ba232: {replace: [a45bfe26, 3e6d3c8e], derive: {LOD: [5458643f]}}
+      3e171584: {replace: [e04dea55]}
+      cce7a5fa: {replace: [8a125464, 5ed7e436], derive: {LOD: [cd98a992]}}
+      90aaf120: {replace: [a260e7f7, 8407b021], derive: {LOD: [875673e3]}}
+      9e3e0ad8: {replace: [dfe134cd, 3ff7cad2], derive: {LOD: [7c04a94d]}}
+      f27be670: {replace: [8f067708, f23483e3, '69994531'], derive: {LOD: [46f4cc65]}}
+      7f609046: {replace: [00e5703f, ee867ac2], derive: {LOD: [9cb33e97]}}
+      f3245be3: {replace: [998bc53c, 4da65048], derive: {LOD: [5db7df05]}}
+      86d4ca00: {replace: [2782d638, e047ea9c]}
+      2d7babdb: {replace: [c02dbf56, 258c919f], derive: {LOD: [8bae44c7]}}
+      1061f8d7: {replace: [f98c7e7c, 59b52b44], derive: {LOD: [28074a34]}}
+      5aa9e8cc: {replace: [eb70f116, 1bc98900], derive: {LOD: [a463a334, f0536df1]}}
+      d6fe5015: {replace: [21f813ba], derive: {LOD: [004cbeab, 67f5fbdd, 742c5c7b]}}
   ChangliLaurelNymph:
     main_hashes:
       - {old: [acbfcfec], new: acbfcfec}
@@ -534,20 +555,23 @@ characters:
   Chisa:
     main_hashes:
       - {old: [afa1587c], new: afa1587c}
+    ensure_lines:
+      CommandListTriggerResourceOverrides:
+        - CheckTextureOverride = ps-t8
     textures:
-      15cddd7c: {meta: {id: '0', type: D}, replace: ['37250244', 8348a33b], derive: {LOD: [c892435b, d9f4db0d]}}
-      d0d2cc80: {meta: {id: '0', type: L}}
-      d6d66a07: {meta: {id: '1', type: D}, replace: [fee91ed9, 06ecbf72], derive: {LOD: [0b89f420, 8d3f6bc6]}}
-      d8ed7611: {meta: {id: '1', type: L}}
-      a620843e: {meta: {id: '2', type: D}, derive: {LOD: [7b7f1a19, 11105c28]}}
-      f1c2e889: {meta: {id: '2', type: L}}
-      662f126a: {meta: {id: '3', type: D}, replace: [c7a7ec1b, 9121c3f8], derive: {injured: [2970cef1], LOD: [bb708c4d, 99a3f0df], LOD_injured: [f42f50d6, a6605a4e]}}
-      a83a8906: {meta: {id: '3', type: L}, replace: [118a1a1f]}
-      eca8e09b: {meta: {id: '3', type: 'N'}, derive: {injured: [d2bc37bc], LOD: [31f77ebc, 893ece88], LOD_injured: [0fe3a99b, 790f2cee]}}
-      e783ca72: {meta: {id: '4', type: D}, replace: [f869e47c, bb49600b], derive: {injured: [a5da2563], LOD: [3adc5455, bc141952], LOD_injured: [7885bb44, d01fdd4f]}}
-      403595f8: {meta: {id: '4', type: L}, replace: [0c153c12, ffa1f581, 89517d4e], derive: {injured: [35b4ef7f]}}
-      9b396b0d: {meta: {id: '4', type: 'N'}, derive: {injured: [412ba586], LOD: [4666f52a, a013489c], LOD_injured: [9c743ba1, 29b60a1b]}}
-      cd006f06: {meta: {id: '5', type: D}, derive: {injured: [2a9050cc], LOD: [105ff121, 1e8c8420], LOD_injured: [f7cfceeb, b95895cf]}}
+      f2646d21: {meta: {id: '0', type: D}, replace: ['37250244', 8348a33b, 15cddd7c], derive: {LOD: [15fbfc67]}}
+      d3b9ba76: {meta: {id: '0', type: L}, replace: [d0d2cc80], derive: {LOD: [c8ebbc6a]}}
+      cbab5910: {meta: {id: '1', type: D}, replace: [fee91ed9, 06ecbf72, d6d66a07]}
+      a842d51f: {meta: {id: '1', type: L}, replace: [d8ed7611]}
+      d030af95: {meta: {id: '2', type: D}, replace: [a620843e], derive: {LOD: [49cfebff]}}
+      6ae8dd10: {meta: {id: '2', type: L}, replace: [f1c2e889], derive: {LOD: [b2519abe]}}
+      165f3a1b: {meta: {id: '3', type: D}, replace: [c7a7ec1b, 9121c3f8, 662f126a]}
+      90196068: {meta: {id: '3', type: L}, replace: [118a1a1f, a83a8906]}
+      526b9ed0: {meta: {id: '3', type: 'N'}, replace: [eca8e09b]}
+      f642139e: {meta: {id: '4', type: D}, replace: [f869e47c, bb49600b, e783ca72]}
+      3f0e6f21: {meta: {id: '4', type: L}, replace: [0c153c12, ffa1f581, 89517d4e, 403595f8]}
+      2b6f8bcb: {meta: {id: '4', type: 'N'}, replace: [9b396b0d]}
+      019c268e: {meta: {id: '5', type: D}, replace: [cd006f06], derive: {LOD: [15474f33]}}
       0cc6f756: {meta: {id: '5', type: 'N'}, derive: {LOD: [d1996971, b07813d6]}}
       1131e4c1: {derive: {LOD: [cc6e7ae6, ed37d75d]}}
       2970cef1: {replace: [7ff6e112]}
@@ -579,26 +603,40 @@ characters:
   Ciaccona:
     main_hashes:
       - {old: [e57c9380], new: e57c9380}
+    rules:
+      - {line_prefix: hash, replacements: [{old: [21f813ba, d6fe5015], new: 742c5c7b}]}
     textures:
       1603d6fa: {replace: [839d2623]}
-      10d1aeac: {replace: [fe853fcf], derive: {LOD: [cd8e308b, adf5b6f5]}}
-      a20c032a: {replace: [19d3de08]}
-      342dcbc3: {replace: [852b2b72], derive: {LOD: [e97255e4, 6292c460]}}
-      6f620405: {meta: {id: '2', type: D}, replace: [4c379f61], derive: {LOD: [b23d9a22, aaba6cee]}}
-      32271b48: {meta: {id: '2', type: L}}
-      24af21ae: {meta: {id: '3', type: D}, replace: [d79a3f55], derive: {LOD: [f9f0bf89, 29fe5a2f]}}
-      ea49c595: {meta: {id: '3', type: L}}
-      de5a0f92: {meta: {id: '3', type: 'N'}, replace: [4358f290], derive: {LOD: [030591b5, 879d4322]}}
-      f58c741e: {meta: {id: '4', type: D}, replace: [2f590d3f], derive: {LOD: [28d3ea39, 64d70da5]}}
-      1cffa7e8: {meta: {id: '4', type: 'N'}, replace: [748f8d97]}
-      5a41b6fa: {meta: {id: '5', type: D}, replace: [cca1af56], derive: {LOD: [871e28dd, 820a082e]}}
-      cf8ac68f: {meta: {id: '5', type: L}}
-      37400c45: {meta: {id: '5', type: 'N'}, replace: [3b5e4a9b], derive: {LOD: [ea1f9262, 8a060c19]}}
-      ed5511fe: {replace: [4e1fdf28], derive: {LOD: [300a8fd9, 7278decc]}}
-      1f746639: {meta: {id: '7', type: D}, replace: [1e072c24], derive: {LOD: [c22bf81e, 0766fb39]}}
-      0448648a: {meta: {id: '7', type: 'N'}, replace: [09e98e33], derive: {LOD: [d917faad, 92b84e8f]}}
+      141dbc74: {replace: [10d1aeac, fe853fcf]}
+      c2bddf85: {replace: [a20c032a, 19d3de08]}
+      fb5cd7be: {replace: [342dcbc3, 852b2b72]}
+      f6c53a65: {replace: [e7f8bb3b, bf7e0ab1]}
+      a8f40af2: {meta: {id: '2', type: D}, replace: [6f620405, 4c379f61]}
+      c3b314ca: {meta: {id: '2', type: L}, replace: [32271b48]}
+      d3933df2: {meta: {id: '3', type: D}, replace: [24af21ae, d79a3f55]}
+      4db471ed: {meta: {id: '3', type: L}, replace: [ea49c595]}
+      d0be8afe: {meta: {id: '3', type: 'N'}, replace: [de5a0f92, 4358f290]}
+      7e5b9732: {meta: {id: '4', type: D}, replace: [f58c741e, 2f590d3f]}
+      46f3a4ed: {meta: {id: '4', type: 'N'}, replace: [1cffa7e8, 748f8d97]}
+      f7bf1c9b: {meta: {id: '5', type: D}, replace: [5a41b6fa, cca1af56]}
+      4a718845: {meta: {id: '5', type: L}, replace: [cf8ac68f]}
+      b210a21c: {meta: {id: '5', type: 'N'}, replace: [37400c45, 3b5e4a9b]}
+      51ac5e38: {replace: [ed5511fe, 4e1fdf28]}
+      9a9b6927: {meta: {id: '7', type: D}, replace: [1f746639, 1e072c24]}
+      5734ef32: {meta: {id: '7', type: 'N'}, replace: [0448648a, 09e98e33]}
+      a506a70d: {replace: [8383cbbf]}
+      742c5c7b: {}
       7bcede78: {replace: [be1295ae]}
       1c03e88d: {replace: [952d2862]}
+  CiacconaUltimate:
+    textures:
+      f7bf1c9b: {replace: [987a6f0e]}
+      fb5cd7be: {replace: [064492c6]}
+      a8f40af2: {replace: [17a8f8fa]}
+      141dbc74: {replace: [70a4acf0]}
+      7e5b9732: {replace: [bebbf828]}
+      d3933df2: {replace: [1603d6fa]}
+      9a9b6927: {replace: [55dfd156]}
   CiacconaCloned:
     main_hashes:
       - {old: [dafb1bef], new: dafb1bef}
@@ -641,17 +679,17 @@ characters:
       62181364: {derive: {LOD: [e44ed660, 83699480]}}
       88176700: {derive: {LOD: [5548f927, 25044843]}}
       1a7930f9: {derive: {LOD: [9c2ff5fd, 271d5528]}}
-      2bee1723: {derive: {LOD: [f6b18904, 44c82de0]}}
+      6172fc3c: {replace: [2bee1723], derive: {LOD: [f6b18904, 44c82de0]}}
       4a6f7e7e: {derive: {LOD: [9730e059, f52b82a3]}}
-      4d03e84c: {derive: {LOD: [905c766b, 9af72cc6]}}
+      768107b7: {replace: [4d03e84c], derive: {LOD: [905c766b, 9af72cc6]}}
       09d68397: {derive: {LOD: [d4891db0, 7f664d4d]}}
-      66d49b87: {derive: {LOD: [bb8b05a0, 42d22518]}}
+      2e562077: {replace: [66d49b87], derive: {LOD: [bb8b05a0, 42d22518]}}
       97064dd7: {derive: {LOD: [4a59d3f0, ece583e5]}}
       650362b8: {derive: {LOD: [b85cfc9f, 7abbb32a]}}
-      698223c8: {derive: {LOD: [b4ddbdef, 1931787e]}}
-      a000a7dd: {derive: {LOD: [7d5f39fa, a3a79657]}}
+      3ead6468: {replace: [698223c8], derive: {LOD: [b4ddbdef, 1931787e]}}
+      74b77ed7: {replace: [a000a7dd], derive: {LOD: [7d5f39fa, a3a79657]}}
       bcb73409: {derive: {LOD: [61e8aa2e, e1cc2d2a]}}
-      bee4b470: {derive: {LOD: [63bb2a57, 7f8f871f]}}
+      0eaf2115: {replace: [bee4b470], derive: {LOD: [63bb2a57, 7f8f871f]}}
       d5ad28af: {derive: {LOD: [08f2b688, 25f51f03]}}
       ee083830: {derive: {LOD: [3357a617, 56d5bca3]}}
       0e92d2b6: {derive: {LOD: [d3cd4c91, eed6b320]}}
@@ -672,20 +710,33 @@ characters:
     vg_remaps:
       - {trigger_hash: [077c8876], vertex_groups: '73:93,74:94,75:95,76:96,77:97,78:98,79:99,80:100,81:101,82:102,83:103,84:104,85:105,86:106,87:107,88:108,89:109,90:110,91:111,92:112,93:113,94:114,95:115,96:116,97:117,98:118,99:119,100:120,101:121,102:122,103:123,104:124,105:125,106:126,107:127,108:128,109:129,110:130,111:131,112:132,113:133,114:134,115:135,116:136,117:137,118:138,119:139,120:140,121:141,122:142,123:143,124:144,125:145,126:146,127:147,128:148,129:149,130:150,131:151,132:152,133:153,134:154,135:155,136:156,137:157,138:158,139:159,140:160,141:161,142:162,143:163,144:164,145:165,146:166,147:167,148:168,149:169,150:170,151:171,152:172,153:173,154:174,155:175,156:176,157:177,158:178,159:179,160:180,161:181,162:182,163:183,164:184,165:185,166:186,167:187,168:188,169:189,170:190,171:191,172:192,173:193,174:194,175:195,176:196,177:197,178:198,179:199,180:200,181:201,182:202,183:203,184:204,185:205,186:206,187:207,188:208,189:209,190:210,191:211,192:212,193:213,194:214,195:215,196:216,197:217,198:218,199:219,200:220,201:221,202:222,203:223,204:224,205:225,206:226,207:227,208:228,209:229,210:230,211:231,212:232,213:233,214:234,215:235,216:236,217:237,218:238,219:239,220:240,221:241,222:242,223:243,224:244,225:245,229:249,230:250,231:251,232:252,233:253,234:254,235:255,236:256,237:257,238:258,239:259,240:260,241:261,242:262,243:263,244:264,245:265,246:266,247:267,248:268,249:269,250:270,251:271,252:272,253:273,254:274,255:275,256:276,257:277,258:278,259:279,260:280,261:281,262:282,263:283,264:284,265:285,266:286,267:287,268:288,269:289,270:290,271:291,272:292,273:293,274:294,275:295,276:296,277:297,278:298,279:299,280:300,281:301,282:302,283:303,284:304,285:305,286:306,287:307,288:308,289:309,290:310,291:311,292:312,293:313,294:314,295:315,296:316,297:317,298:318,299:319,300:320,301:321,302:322,303:323,304:324,305:325,306:326,307:327,308:328,309:329,310:330,311:331,312:332,313:333,314:334,315:335,316:336,317:337,318:338,319:339,320:340,321:341,322:342,323:343,324:344,325:345,326:346,327:347,328:348,329:349,330:350,331:351,332:352,333:353,334:354'}
     textures:
-      c4c77766: {replace: [f90b012b], meta: {id: '3', type: D}, derive: {LOD: [1998e941, b20f9dbb]}}
-      201c995e: {replace: [9b21cc30], meta: {id: '3', type: N}, derive: {LOD: [fd430779, 4606f5f4]}}
-      6917b235: {replace: [1b9e356e], meta: {id: '3', type: L}, derive: {LOD: [b4482c12, ede41d73]}}
+      c2e3b24b: {replace: [f90b012b, c4c77766], meta: {id: '3', type: D}}
+      35699d6a: {replace: [9b21cc30, 201c995e], meta: {id: '3', type: N}}
+      86d3b11f: {replace: [1b9e356e, 6917b235], meta: {id: '3', type: L}}
       548c9e3d: {replace: [fb9f8591], derive: {LOD: [89d3001a, 630bb87f]}}
       37eedd0b: {derive: {LOD: [eab1432c, 05e2949d]}}
-      5b9473a2: {derive: {LOD: [86cbed85, 090b7a3d]}}
-      ad7c2ed3: {derive: {LOD: [7023b0f4, 6ecac2e9]}}
-      761177f1: {derive: {LOD: [f047b2f5, 7f4d0d65]}}
-      2737148d: {derive: {LOD: [fa688aaa, cf285ee7]}}
-      a222bc15: {derive: {LOD: [300462d8, bdbeb2c8]}}
-      0db20298: {derive: {LOD: [8be4c79c, db8625b3]}}
-      79bfbc77: {derive: {LOD: [a4e02250, e037d739]}}
+      439210cf: {replace: [5b9473a2]}
+      d369ae99: {replace: [ad7c2ed3]}
+      9fe54c83: {replace: [761177f1]}
+      1e1946ec: {replace: [2737148d]}
+      33f89d42: {replace: [a222bc15]}
+      0ae01980: {replace: [0db20298]}
+      b07466a5: {replace: [79bfbc77]}
       8e1891d1: {derive: {LOD: [53470ff6, 44147088]}}
-      58329a59: {derive: {LOD: [ca144494, fbb3a3ee]}}
+      34469500: {replace: [58329a59]}
+      5b44af6d: {replace: [62181364]}
+      324c2f74: {replace: [798458c9]}
+      9a432fd0: {replace: [650362b8]}
+      2defd113: {replace: [d5ad28af]}
+      d1ee266d: {replace: [bcb73409]}
+      75d25c45: {replace: [09d68397]}
+      dced9c88: {replace: [88176700]}
+      ce55add8: {replace: [f54ae09a]}
+      977e23ab: {replace: [146b2196]}
+      022aab80: {replace: [1a7930f9]}
+      42e3888a: {replace: [9128876d]}
+      e0338625: {replace: [3c2efa1e]}
+      a506a70d: {replace: [8383cbbf]}
 
   Discord:
     textures:
@@ -703,19 +754,27 @@ characters:
       - {old: [592add5c], new: 592add5c}
       - {old: [388cecb3], new: 388cecb3}
     textures:
-      47c515ac: {replace: [a347d2bc]}
-      b6021f06: {replace: [6ff2b9f1]}
-      3d32cb0e: {replace: [9b440397], derive: {LOD: [96fb0f62]}}
-      8183786e: {replace: [e73ee6fb], derive: {LOD: [5e51ee9a]}}
-      f1838b66: {replace: [5395f197], derive: {LOD: [9106f8b0]}}
-      29c8d938: {replace: [c26d7da2], derive: {LOD: [9e096bf9]}}
-      8def9d8b: {replace: [34617fc8], derive: {LOD: [a564ea10]}}
-      9d0fefda: {replace: [beb2b10e], derive: {LOD: [df2ea351]}}
-      e3e1281a: {replace: [cd7ec1f3], derive: {LOD: [da827fb9]}}
-      f7063e17: {replace: [c44c3cb9], derive: {LOD: [5aa95886]}}
-      996b2e4b: {replace: [b5222998], derive: {LOD: [414a87e8]}}
-      6f62c47a: {replace: [61fce32b]}
-      b47a7a9b: {derive: {LOD: [b5b05043]}}
+      20a94a1c: {replace: [9b440397, 3d32cb0e]}
+      79bd1dd4: {replace: [e73ee6fb, 8183786e]}
+      61ecca16: {replace: [2e6c434e]}
+      4d143df8: {replace: [5395f197, f1838b66]}
+      f48206c1: {replace: [c26d7da2, 29c8d938]}
+      5e5b14c1: {replace: [d1df2ed7]}
+      4e8ca5cb: {replace: [32a393ae]}
+      bf3ce4f6: {replace: [34617fc8, 8def9d8b]}
+      417fc0f1: {replace: [8b5fbd3a]}
+      d143633f: {replace: [0585af30]}
+      ca34bc0c: {replace: [61fce32b, 6f62c47a]}
+      22562e0f: {replace: [beb2b10e, 9d0fefda]}
+      5c567e2a: {replace: [a347d2bc, 47c515ac]}
+      2727b682: {replace: [cd7ec1f3, e3e1281a]}
+      07a76f34: {replace: [6ff2b9f1, b6021f06]}
+      789f4418: {replace: [c44c3cb9, f7063e17]}
+      a827705f: {replace: [320e143c]}
+      839c9e85: {replace: [b5222998, 996b2e4b]}
+      d9b4bf64: {replace: [b47a7a9b]}
+      a506a70d: {replace: [8383cbbf]}
+      742c5c7b: {replace: [c235c6a7]}
   Fleurdelys:
     main_hashes:
       - {old: [618a230e, a74b1202, 6a4d2710, 6a6cd394], new: 2416ec07}
@@ -725,22 +784,30 @@ characters:
       trigger_hash: [618a230e, a74b1202, 6a4d2710, 6a6cd394]
     textures:
       '19862710': {replace: [1fb03721]}
-      b9a64e57: {replace: [88f64559, 3766bc13], derive: {LOD: [64f9d070, 4b102194]}}
-      4bac35dd: {meta: {id: '0', type: D}, replace: [bd6bfc8f, 14e47dee], derive: {LOD: [96f3abfa, cd769404]}}
-      c51aa8d2: {meta: {id: '0', type: L}, replace: [f4e65f69]}
-      50de5497: {meta: {id: '1', type: D}, replace: [1f606caf], derive: {LOD: [8d81cab0, da683d1a]}}
-      5eee477c: {meta: {id: '1', type: L}, replace: [8022dc07]}
-      ece8436e: {meta: {id: '3', type: D}, replace: [e385365e, f079e2b8, 1028b6b7], derive: {LOD: [31b7dd49, e7d2e763]}}
-      cc3910e7: {meta: {id: '3', type: L}, replace: [874ab04e, afb0ea93]}
-      8160bcb0: {meta: {id: '3', type: 'N'}, replace: [b08d5d57, '73110195'], derive: {LOD: [5c3f2297, ea35ebf3]}}
-      bd9cd630: {meta: {id: '4', type: D}, replace: [3ef0be7c, 00a2663b], derive: {LOD: [60c34817, 7c9bea85]}}
-      21d627d4: {meta: {id: '4', type: L}}
-      40cd7ff6: {meta: {id: '4', type: 'N'}, replace: ['48e09820'], derive: {LOD: [9d92e1d1, fc062edb]}}
-      c51948e5: {meta: {id: '5', type: D}, replace: [858f3573], derive: {LOD: [1846d6c2, d8e90315]}}
-      1c8589de: {meta: {id: '5', type: 'N'}, replace: [c344d062], derive: {LOD: [c1da17f9, fb8a16ec]}}
-      c9124759: {meta: {id: '6', type: D}, replace: [d685d037], derive: {LOD: [144dd97e, af8d38bc]}}
-      d1534303: {meta: {id: '6', type: 'N'}, replace: [54d78775], derive: {LOD: [0c0cdd24, 2295ab76]}}
-      8721570a: {meta: {id: '7', type: D}, replace: [439a22f3], derive: {LOD: [5a7ec92d, a48534cb]}}
+      93b1592b: {meta: {id: '2', type: D}, replace: [b9a64e57, 88f64559, 3766bc13]}
+      cd1bd6f6: {meta: {id: '2', type: L}, replace: [6df8bc60]}
+      d602d819: {meta: {id: '0', type: D}, replace: [4bac35dd, bd6bfc8f, 14e47dee]}
+      6fb23061: {meta: {id: '0', type: L}, replace: [c51aa8d2, f4e65f69]}
+      f1107aad: {meta: {id: '1', type: D}, replace: [50de5497, 1f606caf]}
+      f3109732: {meta: {id: '1', type: L}, replace: [5eee477c, 8022dc07]}
+      5a007e02: {meta: {id: '3', type: D}, replace: [ece8436e, e385365e, f079e2b8, 1028b6b7]}
+      45094b52: {meta: {id: '3', type: L}, replace: [cc3910e7, 874ab04e, afb0ea93]}
+      4b120eaa: {meta: {id: '3', type: 'N'}, replace: [8160bcb0, b08d5d57, '73110195']}
+      b8fb5c47: {meta: {id: '4', type: D}, replace: [bd9cd630, 3ef0be7c, 00a2663b]}
+      f510ebdb: {meta: {id: '4', type: L}, replace: [21d627d4]}
+      243acfa0: {meta: {id: '4', type: 'N'}, replace: [40cd7ff6, '48e09820']}
+      830a0f80: {meta: {id: '5', type: D}, replace: [c51948e5, 858f3573]}
+      42a9c39a: {meta: {id: '5', type: 'N'}, replace: [1c8589de, c344d062]}
+      9d100d36: {meta: {id: '6', type: D}, replace: [c9124759, d685d037]}
+      b927a6bc: {meta: {id: '6', type: 'N'}, replace: [d1534303, 54d78775]}
+      5ce12096: {meta: {id: '7', type: D}, replace: [8721570a, 439a22f3]}
+      d23276be: {replace: [ec0fab90]}
+      a506a70d: {replace: [8383cbbf]}
+      75b0fdd6: {replace: [6531b8b2]}
+      1cb4f62d: {replace: [41bd7de9, 9699548f]}
+      79fe16cd: {replace: [b200ba2d, 57acff23]}
+      7e1916af: {replace: [68ea6ae4]}
+      5dc453d0: {replace: [89029fdf]}
       3bd74696: {replace: [9c079580]}
       afbff73e: {replace: [b471214b]}
       d7c318df: {replace: [e4ea3515]}
@@ -748,11 +815,15 @@ characters:
     main_hashes:
       - {old: [75d9b253], new: 75d9b253}
     textures:
-      d8fd081b: {replace: [e4951cd7]}
-      4caf3bfb: {replace: [5fe74f52]}
-      545eb465: {replace: [8376c2a3]}
-      b200ba2d: {replace: [57acff23]}
-      deacf373: {replace: [f488d64b]}
+      dab7504a: {replace: [d8fd081b, e4951cd7]}
+      a880ef80: {replace: [4caf3bfb, 5fe74f52]}
+      75b0fdd6: {replace: [6531b8b2]}
+      3323ba9d: {replace: [14423efd]}
+      79fe16cd: {replace: [b200ba2d, 57acff23]}
+      7e1916af: {replace: [68ea6ae4]}
+      e4221484: {replace: [545eb465, 8376c2a3]}
+      46b5b8b5: {replace: [deacf373, f488d64b]}
+      5dc453d0: {replace: [89029fdf]}
   Flight(normal):
     main_hashes:
       - {old: [b67843da], new: b67843da}
@@ -781,17 +852,24 @@ characters:
       dbfb288a: {derive: {LOD: [06a4b6ad, 65eeadbc]}}
       f73250e5: {derive: {LOD: [2a6dcec2, 7d264809]}}
   Galbrena:
+    main_hashes:
+      - {old: [3765f0a6], new: 3765f0a6}
     textures:
-      3c29f760: {derive: {LOD: [e1766947, 0666a6b6]}}
-      d30b1a7a: {derive: {LOD: [0e54845d, ca596885]}}
-      73e396e6: {derive: {LOD: [aebc08c1, 88b47415]}}
-      153bf11f: {derive: {LOD: [c8646f38, 8217b9fc]}}
-      aa8d8af5: {derive: {LOD: [77d214d2, 085efdd6]}}
-      b5e505fe: {derive: {LOD: [68ba9bd9, c5e6d3cf]}}
-      cad50fd9: {derive: {LOD: [178a91fe, ba558afa]}}
-      54d3f1fa: {derive: {LOD: [898c6fdd, dccc0a7d]}}
-      205adb6b: {derive: {LOD: [fd05454c, f11aa28a]}}
-      722aab39: {derive: {LOD: [af75351e, 89a19d25]}}
+      5da69469: {replace: [3c29f760]}
+      84e02bd6: {replace: [be367fc9]}
+      de0b8f3e: {replace: [d30b1a7a]}
+      3848ff74: {replace: [224c55ef]}
+      ced1306e: {replace: [73e396e6]}
+      46b198df: {replace: [722aab39]}
+      610712df: {replace: [3a8954eb]}
+      52e22fd8: {replace: [54d3f1fa]}
+      43f0f236: {replace: [153bf11f]}
+      196f252b: {replace: [f7e87f20]}
+      51d7c6df: {replace: [b5e505fe]}
+      9946b488: {replace: [aa8d8af5]}
+      268dec44: {replace: [5f0e43e7]}
+      87d04527: {replace: [cad50fd9]}
+      db7a6931: {replace: [205adb6b]}
   glider(normal):
     main_hashes:
       - {old: [a0c4996d], new: a0c4996d}
@@ -807,54 +885,75 @@ characters:
     main_hashes:
       - {old: [14d6362b, d83b3034], new: 91cff509}
     textures:
-      88a0bbcb: {derive: {LOD: [55ff25ec, ff1a7d3b]}}
-      4048c74d: {derive: {LOD: [9d17596a, f1d8cd8b]}}
-      883bcfe6: {derive: {LOD: [0e6d0ae2, '78846848']}}
-      bf508060: {derive: {LOD: [620f1e47, 00c95920]}}
-      c5cca911: {derive: {LOD: ['18933736', 62e83b8e]}}
+      5e804060: {replace: [88a0bbcb], derive: {LOD: [5d07dc8f]}}
+      179fe07e: {replace: [4048c74d]}
+      fc6b51c6: {replace: [883bcfe6]}
+      00ad3de9: {replace: [bf508060]}
+      d6f8159b: {replace: [c5cca911]}
+      16518037: {replace: [dbbc5a9a]}
+      834f5389: {replace: [fad93ee6]}
+      ba2d3319: {replace: [fa6e9670]}
+      0e13b9ce: {replace: [e6f611fe], derive: {LOD: [8b4965bf]}}
+      d4c3878d: {replace: [84b5387b]}
+      7ed83a67: {replace: [de4dc39c, 45986bf4]}
+      1cf10f04: {replace: [5d60bf24]}
+      0b71b442: {replace: [ef4a0b26]}
+      af2d362b: {replace: [bf052424]}
+      11e01fe8: {replace: [750c7901]}
+      e6652153: {replace: [4b9655be, 5edbaac9]}
+      4124fa59: {replace: [82c11611, 123f0570]}
+      44f6cee1: {replace: [97f11e2e]}
+      e856d57c: {replace: [a28fa422]}
+      320d17d8: {replace: [3a0b68fd]}
+      259b7976: {replace: [4f63b006]}
+      41894a0f: {replace: [393f43ad]}
+      d4555e5a: {replace: [aa093336]}
+      13b693db: {replace: [522e7cb9]}
+      2f9c1d22: {replace: [7e5ca42d]}
+      22f7e214: {replace: [42a39385], derive: {LOD: [4c498150]}}
+      4aa60446: {replace: [350ff32b]}
+      b416f91f: {replace: [df70a717], derive: {LOD: [8b6d29ae]}}
+      11d33f73: {replace: [14b477dd]}
+      66d1e065: {replace: [228d4004], derive: {LOD: [e78c6537]}}
+      349e8273: {replace: [a4fb9b89]}
+      77bceda6: {replace: [9e43c7d0]}
+      5d109d68: {replace: [2d8bbdd2, 28f11209]}
+      63ec1998: {replace: [61b6e6af], derive: {LOD: [529db395]}}
+      c72f568c: {replace: [d03b18fb]}
+      c6721b16: {replace: [ad8f79aa]}
+      a506a70d: {replace: [8383cbbf]}
+      d6fe5015: {replace: [21f813ba], derive: {LOD: [004cbeab, 67f5fbdd, 742c5c7b]}}
+      c1d892eb: {replace: [386bcc45]}
+      2745d170: {replace: [67d1ba1b]}
+      6bf7a371: {replace: [40b7b42f]}
+      feb4d9c5: {replace: [41558879]}
+      8c3518c5: {replace: [b9414ce7]}
       d683f054: {derive: {LOD: [0bdc6e73, cd9b76c1]}}
       d74a92b4: {derive: {LOD: [0a150c93, 7c3db8f1]}}
-      5edbaac9: {replace: [4b9655be], derive: {LOD: [838434ee, 2cb29905]}}
-      4f63b006: {derive: {LOD: [923c2e21, 79e710f1]}}
-      5d60bf24: {derive: {LOD: [803f2103, 6a447b08]}}
-      ef4a0b26: {derive: {LOD: ['32159501', b80a80c2]}}
-      fa6e9670: {derive: {LOD: [7c385374, 6fc1ff14]}}
-      a28fa422: {derive: {LOD: [7fd03a05, c80fadb2]}}
-      3a0b68fd: {derive: {LOD: [e754f6da, 3127a7f9]}}
-      42a39385: {derive: {LOD: [9ffc0da2, '1e052035']}}
-      350ff32b: {derive: {LOD: [e8506d0c, 367fec00]}}
-      61b6e6af: {derive: {LOD: [f3903862, 40a0d73c]}}
-      d03b18fb: {derive: {LOD: [421dc636, b715fff3]}}
       88cf890d: {derive: {LOD: [5590172a, b19fedb7]}}
-      228d4004: {derive: {LOD: [ffd2de23, cc12df9f]}}
-      aa093336: {derive: {LOD: [7756ad11, f4dd26de]}}
-      bf052424: {derive: {LOD: [625aba03, b78142d9]}}
-      df70a717: {derive: {LOD: [022f3930, 7d5df80c]}}
-      e6f611fe: {derive: {LOD: [74d0cf33, f12e368f]}}
-      393f43ad: {derive: {LOD: [e460dd8a, bec95a86]}}
-      14b477dd: {derive: {LOD: [c9ebe9fa, a716b371]}}
-      750c7901: {derive: {LOD: [a853e726, a9bb8b43]}}
-      7023c179: {derive: {LOD: [0441a93c, 7023c179]}}
       e983299a: {derive: {LOD: [34dcb7bd, 793f3802]}}
       d835bd5b: {derive: {LOD: [056a237c, 787c71b4]}}
-      84b5387b: {derive: {LOD: [1693e6b6, 4933f56e]}}
-      522e7cb9: {derive: {LOD: [8f71e29e, e83eb17c]}}
-      a4fb9b89: {derive: {LOD: [79a405ae, 2f9b1705]}}
-      123f0570: {replace: [82c11611], derive: {LOD: [cf609b57, 94db49f3]}}
-      d91e371b: {derive: {LOD: [0441a93c, 7023c179]}}
-      28f11209: {replace: [2d8bbdd2]}
+      d91e371b: {replace: [7023c179], derive: {LOD: [0441a93c]}}
   Iuno:
+    main_hashes:
+      - {old: [f8b55eeb], new: f8b55eeb}
     textures:
-      '36921691': {derive: {LOD: [ebcd88b6, 41340ed5]}}
-      058e71e8: {derive: {LOD: [d8d1efcf, 7c26e7cb]}}
-      8390ce3a: {derive: {LOD: [5ecf501d, faa5cd9c]}}
-      5815b5b3: {derive: {LOD: [854a2b94, ecd9468b]}}
-      c70b9ab1: {derive: {LOD: [1a540496, 318751d7]}}
-      b399ecff: {derive: {LOD: [6ec672d8, 534fd6fd]}}
-      eb383fa1: {derive: {LOD: [3667a186, 6eb6f826]}}
-      7143a508: {derive: {LOD: [ac1c3b2f, b3e12dcb]}}
-      eb65da67: {derive: {LOD: [363a4440, a74a4042]}}
-      8e0e454d: {derive: {LOD: [5351db6a, a8c612c4]}}
+      147a09dd: {replace: ['36921691', ebcd88b6, '41340ed5']}
+      ed144eda: {replace: [058e71e8, d8d1efcf, 7c26e7cb]}
+      e08cc917: {replace: [8390ce3a, 5ecf501d, faa5cd9c]}
+      e2858e1b: {replace: [5815b5b3, 854a2b94, ecd9468b]}
+      d07dd526: {replace: [c70b9ab1, 1a540496, '318751d7']}
+      5315f443: {replace: [b399ecff, 6ec672d8, 534fd6fd]}
+      466cbfd6: {replace: [eb383fa1, 3667a186, 6eb6f826]}
+      dc098f8d: {replace: [7143a508, ac1c3b2f, b3e12dcb]}
+      a9b25e96: {replace: [eb65da67, 363a4440, a74a4042]}
+      3d40779b: {replace: [8e0e454d, 5351db6a, a8c612c4]}
+      0d469340: {replace: [a410510a]}
+      a3a40bf8: {replace: [cb93d0e5]}
+      742c5c7b: {replace: [21f813ba]}
+      7078e9ad: {replace: [a50b55d6]}
+      e3f759b8: {replace: [b36886fb]}
+      ccdf8393: {replace: [d2b23835]}
   Jianxin:
     main_hashes:
       - {old: [80f8caf9, e9f8341f], new: 9b60ec42}
@@ -1031,19 +1130,38 @@ characters:
     main_hashes:
       - {old: [5b33088a], new: 5b33088a}
     textures:
-      '20927988': {replace: [06c9cbd2]}
-      312fc5e4: {replace: [e541ab4b], derive: {LOD: [ec705bc3, d5bc8a69]}}
-      d1c82bf3: {replace: [c5d64764]}
-      3ba4af04: {replace: [eb4d05bb], derive: {LOD: [e6fb3123, 3dfeb448]}}
-      41532ac9: {replace: [5d7d3f28]}
-      3cf552bd: {replace: [84206d9f], derive: {LOD: [e1aacc9a, 9754db71]}}
-      bbb18270: {replace: [77ba7584], derive: {LOD: [66ee1c57, 9c1b55fc]}}
-      8f9bacd2: {replace: [bd1bcfd8], derive: {LOD: [52c432f5, 719a193c]}}
-      4c57726e: {replace: [e4638507], derive: {LOD: [9108ec49, b85d7152]}}
-      b7a16140: {replace: [62ef42ef], derive: {LOD: [6afeff67, '17705954']}}
-      9d5fe765: {replace: [79b6c3f4], derive: {LOD: ['40007942', ff861bc9]}}
-      1443c0c0: {replace: [c347ca65], derive: {LOD: [c91c5ee7, ba9de937]}}
-      6f70c428: {derive: {LOD: [b22f5a0f, ba21b0d3]}}
+      7bf47422: {replace: [3ba4af04, eb4d05bb], derive: {LOD: [008efaac]}}
+      9f73f4b1: {replace: [d1c82bf3, c5d64764]}
+      e18c31ec: {replace: [3cf552bd, 84206d9f], derive: {LOD: [0e6180e2]}}
+      '23097842': {replace: [41532ac9, 5d7d3f28]}
+      4da5a0ce: {replace: [bbb18270, 77ba7584], derive: {LOD: [491f41e9]}}
+      1efff1fe: {replace: [248b354f], derive: {LOD: [14a5a4a0]}}
+      539bb5be: {replace: [312fc5e4, e541ab4b], derive: {LOD: [8a9ce668]}}
+      757d77d3: {replace: [eb3b4396], derive: {LOD: [ee8b25fe]}}
+      7fdbbf5c: {replace: [6f70c428], derive: {LOD: [f2c9bedc]}}
+      44f39c4a: {replace: [8f9bacd2, bd1bcfd8], derive: {LOD: [abc753a5]}}
+      fad39b8d: {replace: [4c57726e, e4638507], derive: {LOD: [3c620b6d]}}
+      dee5c4df: {replace: [b7a16140, 62ef42ef], derive: {LOD: [6d9d84aa]}}
+      30e60a96: {replace: [9d5fe765, 79b6c3f4], derive: {LOD: [e0032e93]}}
+      dfbf87de: {replace: [1443c0c0, c347ca65], derive: {LOD: [34e3295c]}}
+      a506a70d: {replace: [8383cbbf]}
+      d6fe5015: {replace: [21f813ba, c235c6a7], derive: {LOD: [004cbeab, 67f5fbdd, 742c5c7b]}}
+      bb73967a: {replace: [2ec39396]}
+      20b169ce: {replace: [f52454f2]}
+      24d13e57: {replace: [bcf7cb03]}
+  LupaEffect:
+    main_hashes:
+      - {old: [c8a3ba12], new: c8a3ba12}
+    textures:
+      c1c1061e: {replace: [1d1adc02]}
+      e2fe6821: {replace: [21db5107]}
+      3beea079: {replace: [8f0cda59]}
+      20b169ce: {replace: [f52454f2]}
+      1c3889ad: {replace: [1d1f6d55]}
+      a98c980a: {replace: [33d8d89d]}
+      cd61d55d: {replace: [57d394cd]}
+      6d53d945: {replace: [6551451a]}
+      e10f8732: {replace: [8f9820f5]}
   LupaSpear:
     main_hashes:
       - {old: [3ae1074d], new: 3ae1074d}
@@ -1053,7 +1171,11 @@ characters:
     main_hashes:
       - {old: [f49ec658], new: f49ec658}
     textures:
-      7fb7147f: {replace: [0bf5cead]}
+      1c1717eb: {replace: ['20927988', 06c9cbd2]}
+      6e342aaf: {replace: [7fb7147f, 0bf5cead]}
+      bb73967a: {replace: [2ec39396]}
+      f60a4753: {replace: [53b0c79c]}
+      7c57d4db: {replace: [fcc168c2]}
   Lustrous_Razor:
     main_hashes:
       - {old: [6c13129e], new: 6c13129e}
@@ -1092,27 +1214,30 @@ characters:
   Lynae:
     main_hashes:
       - {old: [0c33d628], new: 0c33d628}
+    ensure_lines:
+      CommandListTriggerResourceOverrides:
+        - CheckTextureOverride = ps-t9
     textures:
-      9abbcd6f: {replace: [2e60ca6c], derive: {LOD: [089d13a2, ac214ce8], Gacha: [9564c78b, 5d97825c, 483b59ac]}}
-      2fd59f3a: {derive: {LOD: [f28a011d, '15059448'], Gacha: [4bdeea88, 37acf629, 968174af]}}
-      23d9b128: {derive: {LOD: [fe862f0f, fef5aa79], Gacha: [497a35aa, b70b45ae, 9ec7d908, 7039ca55, ceb3fee5, e5c22e95, 6c1c688a, bae1b5ea, 4398472f, b143f6ad, 9425ab8d, 13ec60c2]}}
-      60caec0b: {derive: {LOD: [bd95722c, eb97efb9], Gacha: [0f47e901, 4f2812cc, 2320046b, 51e80eed, d2187726, fe7f9a4c]}}
-      37cdf366: {replace: [211e50f4], derive: {LOD: [ea926d41, a2391240], Gacha: [4311c0b1, 09105c98, 22b1401f, '28025e54']}}
-      ba2b09a1: {replace: [391a7fde], derive: {LOD: ['67749786', 00bbd968], Gacha: [9e6a91bc, 28ae13d3]}}
-      70ee685f: {replace: [879f275e], derive: {LOD: [adb1f678, 06292c74], Gacha: [dc28ff2e, 0d8bd0a7, '01776109']}}
-      7065b0be: {derive: {LOD: [ad3a2e99, 8e06248c], Gacha: [ce203875, 196a084f, 137fa652]}}
-      358f8d1e: {replace: [a8e46264], derive: {LOD: [e8d01339, 927bb0b1], Gacha: [c51ad9c1, 055dbe4c, '184547e6']}}
-      b0e8646a: {derive: {LOD: [6db7fa4d, e65ea0d0], Gacha: [acc8e74a, aa39082d, 7197796d]}}
-      c84b599c: {replace: [cb04a3d7], derive: {LOD: [1514c7bb, 9aae7fdb], Gacha: [47700ba0, be16f064, bc4c1d22, c62d648, '61138305']}}
-      6c09d0d7: {replace: [ec6b0edc], derive: {LOD: [b1564ef0, 179dcb60], Gacha: [6a1b490e, dee612b2, b744d729]}}
-      7aa57b2c: {derive: {LOD: [a7fae50b, 8aa5b045]}}
-      10c8713e: {derive: {LOD: [cd97ef19, 5dba0f93]}}
-      '38686e88': {derive: {LOD: [e537f0af, '7e202348'], Gacha: [91b7fedc]}}
-      dd5dceaa: {derive: {LOD: [0002508d, 4053631d], Gacha: [4feb8f2c]}}
-      c5784ddf: {derive: {LOD: [1827d3f8, 2949a306]}}
-      c49bec43: {derive: {LOD: [19c47264, 607d713e]}}
-      6d5f71f9: {derive: {LOD: [b000efde, 99b0f5d1]}}
-      950acc22: {derive: {LOD: ['48555205', '95944679']}}
+      0f19cf16: {replace: [2e60ca6c, 9abbcd6f], derive: {LOD: [b52a118e], Gacha: [9564c78b, 5d97825c, 483b59ac]}}
+      739ef6e9: {replace: [2fd59f3a], derive: {LOD: [d5df6fa8], Gacha: [4bdeea88, 37acf629, 968174af]}}
+      1998df83: {replace: [23d9b128], derive: {LOD: [87a10dee], Gacha: [497a35aa, b70b45ae, 9ec7d908, 7039ca55, ceb3fee5, e5c22e95, 6c1c688a, bae1b5ea, 4398472f, b143f6ad, 9425ab8d, 13ec60c2]}}
+      179ec8b9: {replace: [60caec0b], derive: {LOD: [463d42bc], Gacha: [0f47e901, 4f2812cc, 2320046b, 51e80eed, d2187726, fe7f9a4c]}}
+      c3375aee: {replace: [211e50f4, 37cdf366], derive: {LOD: [9aab9e09], Gacha: [4311c0b1, 09105c98, 22b1401f, '28025e54']}}
+      cecc13eb: {replace: [391a7fde, ba2b09a1], derive: {LOD: [4f08a156], Gacha: [9e6a91bc, 28ae13d3]}}
+      f94bbcf4: {replace: [879f275e, 70ee685f], derive: {LOD: [a1e9ea20], Gacha: [dc28ff2e, 0d8bd0a7, '01776109']}}
+      265d844d: {replace: [7065b0be], derive: {LOD: [7c00f8bc], Gacha: [ce203875, 196a084f, 137fa652]}}
+      0eacd18a: {replace: [a8e46264, 358f8d1e], derive: {LOD: [9c445a66], Gacha: [c51ad9c1, 055dbe4c, '184547e6']}}
+      7d044e58: {replace: [b0e8646a], derive: {LOD: [68f362e4], Gacha: [acc8e74a, aa39082d, 7197796d]}}
+      a004a399: {replace: [cb04a3d7, c84b599c], derive: {LOD: [31625306], Gacha: [47700ba0, be16f064, bc4c1d22, c62d648, '61138305']}}
+      0f5d6c08: {replace: [ec6b0edc, 6c09d0d7], derive: {LOD: [f68762c4], Gacha: [6a1b490e, dee612b2, b744d729]}}
+      4f1d5285: {replace: [7aa57b2c], derive: {LOD: [e07849d1]}}
+      d2ef0438: {replace: [10c8713e], derive: {LOD: [0fc46a2c]}}
+      d5dfa096: {replace: ['38686e88'], derive: {LOD: [968beddd], Gacha: [91b7fedc]}}
+      94d7281e: {replace: [dd5dceaa], derive: {LOD: [b8c41f77], Gacha: [4feb8f2c]}}
+      c5784ddf: {derive: {LOD: [2949a306]}}
+      c49bec43: {derive: {LOD: [97e53f80]}}
+      6d5f71f9: {derive: {LOD: [99b0f5d1]}}
+      950acc22: {derive: {LOD: ['95944679']}}
       1261dcbc: {replace: [513eace9]}
       8e20c909: {replace: [347a41a2], derive: {LOD: [537f572e, 2d50f344]}}
       b5453395: {replace: [17372a89]}
@@ -1253,16 +1378,24 @@ characters:
     main_hashes:
       - {old: [2819cef7], new: 2819cef7}
     textures:
-      d8121963: {replace: [9b2007f8], derive: {LOD: [054d8744, 12a61d5b]}}
-      b7d01975: {replace: [8592dec8]}
-      c9a55c1a: {replace: [be835337, e6819fc8], derive: {LOD: [14fac23d, 84321f7d]}}
-      5052ee31: {replace: [cd8fe20c], derive: {LOD: [09ef9586]}}
-      2a818c36: {replace: [f528fff3]}
-      584e289f: {derive: {LOD: [4563a698]}}
-      5ef9b4d3: {derive: {LOD: [83a62af4, 25f2d74b]}}
-      dd620352: {derive: {LOD: [003d9d75, a16642a8]}}
-      183fe440: {derive: {LOD: [c6cb37ba]}}
-      d054db9b: {derive: {LOD: [0d0b45bc, de9cf2bd]}}
+      d44d6c55: {replace: [584e289f]}
+      97715493: {replace: [a7bc8074]}
+      742c5c7b: {replace: [21f813ba, c235c6a7]}
+      ec7bb0fa: {replace: [5ef9b4d3]}
+      f8d108e3: {replace: [eb978a29]}
+      abd78989: {replace: [183fe440]}
+      84cd66ac: {replace: [b55a11e4]}
+      a506a70d: {replace: [8383cbbf]}
+      1b751255: {replace: [9b2007f8, d8121963]}
+      d6de6ec6: {replace: [8592dec8, b7d01975]}
+      5a594240: {replace: [be835337, e6819fc8, c9a55c1a]}
+      24d13e57: {replace: [bcf7cb03]}
+      388a3c12: {replace: [dd620352]}
+      6981dea4: {replace: [854d739c]}
+      971e6193: {replace: [d054db9b]}
+      0b5b50ae: {replace: [cd8fe20c, 5052ee31]}
+      d0524bfb: {replace: [c88cc1fc]}
+      d3cd9504: {replace: [f528fff3, 2a818c36]}
   RedSpring:
     main_hashes:
       - {old: [c693a1b0], new: c693a1b0}
@@ -1275,20 +1408,31 @@ characters:
     main_hashes:
       - {old: [8d97c1bd], new: 8d97c1bd}
     textures:
-      ea12c00e: {replace: [df813937]}
-      21ff0f89: {replace: [87d73bf2], derive: {LOD: [fca091ae, b7c7f235]}}
-      98decec7: {replace: [42d605d4]}
-      39db08c0: {replace: [86f266a5], derive: {LOD: [e48496e7, 89ec32af]}}
-      48bd8b69: {replace: [6f2fd0ce], derive: {LOD: [95e2154e, e1b13199]}}
-      c915f11c: {replace: [1d5ea77e], derive: {LOD: [144a6f3b, d3cb2336]}}
-      7515ea2e: {replace: [1e5ddfd3], derive: {LOD: [e73334e3, a2ed670f]}}
-      859f8f55: {replace: [16558db2], derive: {LOD: [58c01172, 06b9963c]}}
-      24b44872: {replace: [8c76d557], derive: {LOD: [b69296bf, 3dd4a788]}}
-      8759aa05: {replace: [843152d9], derive: {LOD: [5a063422, c338a531]}}
-      '84e10138': {replace: [af77fb44], derive: {LOD: [59be9f1f, 836f8416]}}
-      4c151aa4: {replace: [c9c9ae65], derive: {LOD: [914a8483, 47dc71ee]}}
-      778a83a4: {replace: [f10f32ad], derive: {LOD: [aad51d83, 9bfd4664]}}
-      0807dcc7: {replace: [718589a4], derive: {LOD: [d55842e0, f0a11e9f]}}
+      8bed3bc9: {replace: [ea12c00e, df813937]}
+      411a2ebc: {replace: [98decec7, 42d605d4]}
+      85c7eaa7: {replace: [21ff0f89, 87d73bf2]}
+      effb0d9a: {replace: [39db08c0, 86f266a5]}
+      a30d2bc4: {replace: [48bd8b69, 6f2fd0ce]}
+      904100ac: {replace: [9c46eccc]}
+      8cf59acd: {replace: [859f8f55, 16558db2]}
+      93c2cd44: {replace: [c915f11c, 1d5ea77e]}
+      8bd9b4b4: {replace: [7515ea2e, 1e5ddfd3]}
+      6459716d: {replace: [24b44872, 8c76d557]}
+      818046cf: {replace: [8759aa05, 843152d9]}
+      ac7f85a2: {replace: ['84e10138', af77fb44]}
+      059beb09: {replace: [9c92e45e]}
+      742c5c7b: {replace: [21f813ba, c235c6a7]}
+      31ca0e89: {replace: [4c151aa4, c9c9ae65]}
+      e9168f37: {replace: [778a83a4, f10f32ad]}
+      6bf7a371: {replace: [40b7b42f]}
+      bb9e7a6c: {replace: [0807dcc7, 718589a4]}
+      d0524bfb: {replace: [c88cc1fc]}
+      ffb3f4ae: {replace: [a3db372f]}
+      f31444ea: {replace: [d1c76257], derive: {Component6: [15abcb7d]}}
+      bb73967a: {replace: [f47bc395, 5019e88f]}
+      a506a70d: {replace: [8383cbbf]}
+      9efe040e: {replace: [9f6eaf2e]}
+      14113607: {replace: [ab012b35]}
   RoverFemale:
     main_hashes:
       - {old: [be84b775, e8b5a730, 3533a957, bd26f515, '06482222', 4d3d06a6, 25a5716a], new: 680c3e35}
@@ -1409,22 +1553,34 @@ characters:
     main_hashes:
       - {old: [0266ab77], new: 0266ab77}
     textures:
-      c148034c: {replace: [1fb14596]}
-      8e19fa21: {replace: [952d9960]}
-      13baf2f6: {replace: [a2f6b3e4], derive: {LOD: [cee56cd1, 1f025081]}}
-      fb389390: {replace: [2779cda7], derive: {LOD: [26670db7, 9c3fdc2b]}}
-      4b0e4779: {replace: [33b7a4d5], derive: {LOD: [9651d95e, cb108cde]}}
-      41b0d744: {replace: [5e0383e5]}
-      529645a1: {replace: [be955444], derive: {LOD: [8fc9db86, d7868caf]}}
-      5aa61d2f: {replace: [15d38062], derive: {LOD: [87f98308, b461b5ad]}}
-      a8ef808e: {replace: [5ae09e60]}
-      d2f2fe3e: {replace: [2cb33efd], derive: {LOD: [0fad6019, 1de8f735]}}
-      b9136153: {replace: [b7997090], derive: {LOD: [644cff74, ef411dda]}}
-      03284c19: {replace: [f510cf89], derive: {LOD: [de77d23e, 44b15706]}}
-      6e3d31e6: {replace: [00b2fa86], derive: {LOD: [b362afc1, 352c3eef]}}
-      a7c9acc3: {replace: [49f91bc3]}
-      2293ef8e: {replace: [6a6c419b]}
-      ec2a6255: {replace: [26ef0c33]}
+      02d1aab5: {replace: [c148034c, 1fb14596]}
+      d7b67ac9: {replace: [8e19fa21, 952d9960]}
+      d00df274: {replace: [13baf2f6, a2f6b3e4, cee56cd1, 1f025081]}
+      14113607: {replace: [ab012b35]}
+      b6e42e44: {replace: [fb389390, 2779cda7, 26670db7, 9c3fdc2b]}
+      9efe040e: {replace: [9f6eaf2e]}
+      f5ab0aee: {replace: [cabb2d42]}
+      b6446278: {replace: [e4e653f9]}
+      39e1170f: {replace: [a8d8df97]}
+      49ba5924: {replace: [1cd5eb92]}
+      8b7d4590: {replace: [6e3d31e6, 00b2fa86, b362afc1, 352c3eef]}
+      a506a70d: {replace: [8383cbbf]}
+      3e171584: {replace: [e04dea55]}
+      d2e43399: {replace: [ec2a6255, 26ef0c33]}
+      901c1b3b: {replace: [41b0d744, 5e0383e5]}
+      835b9e48: {replace: [2293ef8e, 6a6c419b]}
+      6b927a4d: {replace: [529645a1, be955444, 8fc9db86, d7868caf]}
+      bc076591: {replace: [5aa61d2f, 15d38062, 87f98308, b461b5ad]}
+      ec109fae: {replace: [87e93853]}
+      4d2ecdef: {replace: [a7c9acc3, 49f91bc3]}
+      68f24fa7: {replace: [a8ef808e, 5ae09e60]}
+      bb73967a: {replace: [f47bc395]}
+      58821a69: {replace: [d2f2fe3e, 2cb33efd, 0fad6019, 1de8f735]}
+      4d029a37: {replace: [b9136153, b7997090, 644cff74, ef411dda]}
+      18c9c8d6: {replace: [2b933cc9]}
+      ff359cf9: {replace: [4b0e4779, 33b7a4d5, 9651d95e, cb108cde]}
+      bd55adad: {replace: [03284c19, f510cf89, de77d23e, 44b15706]}
+      1cb4f62d: {replace: [41bd7de9, 9699548f]}
       3c6893ca: {derive: {LOD: [35ef720e, ab300b04]}}
       aa2066e4: {derive: {LOD: [3ac95e43, f4674d5a]}}
       0b818896: {derive: {LOD: [536edd81, f512e7f5]}}
@@ -1503,18 +1659,23 @@ characters:
     vg_remaps:
       - {trigger_hash: [83ced9f7], vertex_groups: '40:41,41:40,77:78,78:79,79:80,80:81,81:82,82:83,83:84,84:85,85:86,86:87,87:88,88:89,89:90,90:91,91:92,92:93,93:94,94:95,95:96,96:97,97:98,98:99,99:100,100:101,101:102,102:103,103:104,104:105,105:106,106:107,107:108,108:109,109:110,110:111,111:77,112:113,114:115,174:178,175:177,176:174,177:175,178:176', component_remap: [{component_index: '3', indices: '5:6,6:5,34:33,37:46,76:42,79:80,80:79'}, {component_index: '4', indices: '39:43,40:42,41:39,42:40,43:41'}]}
     textures:
-      48c627b9: {replace: [fd892e3c, 953daba7], derive: {LOD: [5e3f4246]}}
-      a2d01f96: {replace: ['5981e400', 40f3c4ea], derive: {LOD: [c0ecaf60]}}
-      08be5cdb: {replace: [63d590db, c0ca0958], derive: {LOD: [33dccc25]}}
-      16b54cef: {replace: [679ad2f5], derive: {LOD: [1dc174e7]}}
-      5e99cc67: {replace: [24c1883d], derive: {LOD: [c8a56de7]}}
-      cb01a05c: {replace: ['03416881']}
-      e2a003ed: {replace: [fcc47274], derive: {LOD: [a5b1826c]}}
-      e2887be0: {replace: [ae7043eb], derive: {LOD: [fd539613]}}
-      412de025: {replace: [dc7f97f7], derive: {LOD: [17488b7e]}}
-      edc699f5: {replace: [309b25ba]}
-      54fb587d: {derive: {LOD: [cd96fcb9]}}
-      d859b60d: {derive: {LOD: [6a788c1d]}}
+      10d9df5f: {replace: [309b25ba, edc699f5]}
+      6077b727: {replace: [679ad2f5, 16b54cef]}
+      8a90ff8c: {replace: ['03416881', cb01a05c]}
+      ed14910e: {replace: [fcc47274, e2a003ed]}
+      4509c5b1: {replace: [b81ebdb2]}
+      cbe6a899: {replace: [ae7043eb, e2887be0]}
+      4fe28bc5: {replace: [54fb587d]}
+      ce1302b9: {replace: [fd892e3c, 953daba7, 48c627b9]}
+      151c7257: {replace: [d820db97]}
+      0cefa11c: {replace: [63d590db, c0ca0958, 08be5cdb]}
+      53c9681f: {replace: [237b9fd4]}
+      2fc3ceed: {replace: [24c1883d, 5e99cc67]}
+      9c852fb6: {replace: ['5981e400', 40f3c4ea, a2d01f96]}
+      cbba64a7: {replace: [d859b60d]}
+      a506a70d: {replace: [8383cbbf]}
+      ab28ed23: {replace: [dc7f97f7, 412de025]}
+      742c5c7b: {replace: [c235c6a7]}
   WaningRedshift:
     main_hashes:
       - {old: [1de81fab], new: 1de81fab}
@@ -1639,16 +1800,27 @@ characters:
     main_hashes:
       - {old: [dbc0a3d1], new: dbc0a3d1}
     textures:
-      eba837f6: {replace: [f005294b], derive: {LOD: [36f7a9d1, 1c03233e]}}
-      a5da61f8: {replace: [4fb245db], derive: {LOD: [7885ffdf, a85a8201]}}
-      34fd8ff4: {replace: [ac0a77cf], derive: {LOD: [dcf7abf4]}}
-      3624cd00: {replace: [34774f22], derive: {LOD: [80fc44af]}}
-      a4a04996: {replace: [c28372b3], derive: {LOD: [9b597ca5]}}
-      3c1567ae: {derive: {LOD: [2c421000]}}
-      5261a986: {derive: {LOD: [d0a54837]}}
+      2fe74da6: {replace: [eba837f6, f005294b]}
+      ebe927d8: {replace: [3c1567ae]}
+      de2d50ef: {replace: [34fd8ff4, ac0a77cf]}
+      5b31df44: {replace: [a5da61f8, 4fb245db]}
+      4b6a79a3: {replace: [a4a04996, c28372b3]}
+      1d87721d: {replace: [5261a986]}
+      6e30fa73: {replace: [3624cd00, 34774f22]}
+      d6fe5015: {replace: [21f813ba]}
+      89164754: {replace: [de0e0858, 6070986d]}
   Zani_Lower:
     main_hashes:
       - {old: [12b90236, '07352718'], new: c99c5635}
+    textures:
+      bd24084a: {replace: [002ba82f]}
+      9c4d3033: {replace: [de4463e0, 69ce5914]}
+      f2338b4a: {replace: [ac687edd, 988c2332]}
+      d2b98bac: {replace: [7a411663]}
+      ebb57b91: {replace: [17d03603, ce1aa29a]}
+      5a073662: {replace: [726c6138, 73c4cc50]}
+      a506a70d: {replace: [8383cbbf]}
+      8edc6680: {replace: [2ba75c9c, a6006726]}
   Zani_Shield:
     main_hashes:
       - {old: ['76834247'], new: '76834247'}
@@ -1661,8 +1833,16 @@ characters:
       - {old: [08e242b9], new: 9e87c4cb}
       - {old: [e88e60cb], new: 28add98e}
     textures:
-      eba80d04: {replace: [66ec53c0, 612a235b, d1c1a195], derive: {LOD: [36f79323, 83fca446]}}
-      eec46ff3: {replace: [c676996a, 18a76e47, 61de7097], derive: {LOD: [339bf1d4, d30b835d]}}
+      7d64bf19: {replace: [1133b076, 71f1a895]}
+      ebc2bf7b: {replace: [5bcca6de, 7f15f013]}
+      1b46da49: {replace: [6df52af4, a7869af0]}
+      6a36128b: {replace: [85371f27, 6b885af9]}
+      fd05a178: {replace: [5fe6e3f5, c91bc37a]}
+      3d742ace: {replace: [2bf706b8]}
+      2f953c59: {replace: [eba80d04, 66ec53c0, 612a235b, d1c1a195]}
+      15113ce7: {replace: [67316edd, bfaa82b4]}
+      2a2afdf7: {replace: [eec46ff3, c676996a, 18a76e47, 61de7097]}
+      a506a70d: {replace: [8383cbbf]}
   Zhezhi:
     main_hashes:
       - {old: [c8b08afd], new: b4525ff8}

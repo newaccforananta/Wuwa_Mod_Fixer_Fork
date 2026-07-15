@@ -337,6 +337,7 @@ impl ModFixer {
                     }
                 }
                 ini_modified |= self.replace_by_rules(&mut new_content, &config.rules);
+                ini_modified |= ensure_section_lines(&mut new_content, &config.ensure_lines);
 
                 // [Phase 2] 材质扩展 (RabbitFX)
                 if self.enable_stable_texture {
@@ -1519,5 +1520,108 @@ impl ModFixer {
             buf_data.extend_from_slice(&[0u8; 4]);
         }
         return buf_data;
+    }
+}
+
+fn ensure_section_lines(content: &mut String, sections: &HashMap<String, Vec<String>>) -> bool {
+    let header_re = Regex::new(r"(?m)^[ \t]*\[([^\]\r\n]+)\][^\r\n]*\r?$").unwrap();
+    let line_ending = if content.contains("\r\n") { "\r\n" } else { "\n" };
+    let mut modified = false;
+
+    for (section_name, required_lines) in sections {
+        if required_lines.is_empty() { continue; }
+
+        let headers: Vec<(String, usize, usize)> = header_re
+            .captures_iter(content)
+            .filter_map(|captures| {
+                let full = captures.get(0)?;
+                let name = captures.get(1)?.as_str().trim().to_owned();
+                Some((name, full.start(), full.end()))
+            })
+            .collect();
+
+        let Some((header_index, (_, _, header_end))) = headers
+            .iter()
+            .enumerate()
+            .find(|(_, (name, _, _))| name.eq_ignore_ascii_case(section_name))
+        else { continue; };
+
+        let mut body_start = *header_end;
+        if content[body_start..].starts_with("\r\n") {
+            body_start += 2;
+        } else if content[body_start..].starts_with('\n') {
+            body_start += 1;
+        }
+        let body_end = headers
+            .get(header_index + 1)
+            .map(|(_, start, _)| *start)
+            .unwrap_or(content.len());
+        let body = &content[body_start..body_end];
+
+        let missing: Vec<&str> = required_lines
+            .iter()
+            .map(String::as_str)
+            .filter(|required| {
+                !body.lines().any(|line| {
+                    line.split(';').next().unwrap_or("").trim()
+                        .eq_ignore_ascii_case(required.trim())
+                })
+            })
+            .collect();
+
+        if missing.is_empty() { continue; }
+
+        let trimmed_body_len = body.trim_end_matches(char::is_whitespace).len();
+        let insert_at = body_start + trimmed_body_len;
+        let mut insertion = String::new();
+        if trimmed_body_len > 0 || body_start == *header_end {
+            insertion.push_str(line_ending);
+        }
+        insertion.push_str(&missing.join(line_ending));
+        if trimmed_body_len == 0 && body_start < body_end {
+            insertion.push_str(line_ending);
+        }
+
+        content.insert_str(insert_at, &insertion);
+        modified = true;
+    }
+
+    modified
+}
+
+#[cfg(test)]
+mod tests {
+    use super::ensure_section_lines;
+    use std::collections::HashMap;
+
+    #[test]
+    fn ensures_missing_line_once_in_existing_section() {
+        let mut content = String::from(
+            "[CommandListTriggerResourceOverrides]\r\nCheckTextureOverride = ps-t7\r\n\r\n[Other]\r\nvalue = 1\r\n",
+        );
+        let sections = HashMap::from([(
+            "CommandListTriggerResourceOverrides".to_owned(),
+            vec!["CheckTextureOverride = ps-t8".to_owned()],
+        )]);
+
+        assert!(ensure_section_lines(&mut content, &sections));
+        assert!(!ensure_section_lines(&mut content, &sections));
+        assert_eq!(content.matches("CheckTextureOverride = ps-t8").count(), 1);
+        assert!(content.contains(
+            "CheckTextureOverride = ps-t7\r\nCheckTextureOverride = ps-t8\r\n\r\n[Other]",
+        ));
+    }
+
+    #[test]
+    fn skips_missing_section() {
+        let mut content = String::from("[Other]\nvalue = 1\n");
+        let original = content.clone();
+        let sections = HashMap::from([(
+            "CommandListTriggerResourceOverrides".to_owned(),
+            vec!["CheckTextureOverride = ps-t8".to_owned()],
+        )]);
+
+        assert!(!ensure_section_lines(&mut content, &sections));
+        assert_eq!(content, original);
     }
 }

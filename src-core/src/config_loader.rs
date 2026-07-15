@@ -44,6 +44,7 @@ pub struct CharacterConfig {
     pub textures:    HashMap<String, TextureNode>,
     pub checksum:    Option<String>,
     pub rules:       Option<Vec<ReplacementRule>>,
+    pub ensure_lines: HashMap<String, Vec<String>>,
     pub vg_remaps:   Option<Vec<VertexRemapConfig>>,
     pub stride_fix:  Option<StrideFix>,
 }
@@ -459,6 +460,22 @@ pub async fn update_config_from_remote() -> Result<(), ConfigError> {
     let config_data = load_remote_config("config.json").await?;
     let remote_config: GlobalConfig = serde_json::from_str(&config_data).map_err(ConfigError::SerdeError)?;
 
+    if let Some(current) = CONFIG.get() {
+        let local_version = Version::parse(
+            current.load().version_ref().current_version.trim_start_matches('v'),
+        )?;
+        let remote_version = Version::parse(
+            remote_config.version_ref().current_version.trim_start_matches('v'),
+        )?;
+        if remote_version < local_version {
+            println!(
+                "Remote config {} is older than local config {}; keeping local config.",
+                remote_version, local_version
+            );
+            return Ok(());
+        }
+    }
+
     if let Some(arc_swap) = CONFIG.get() {
         arc_swap.store(Arc::new(remote_config));
         println!("🌐 Config successfully updated from remote and hot-swapped!");
@@ -483,10 +500,9 @@ pub async fn force_reload_remote_config() -> Result<(), ConfigError> {
 }
 
 async fn load_remote_config(file_name: &str) -> Result<String, ConfigError> {
-    let remotes = [
-        format!("https://gitee.com/moonholder/Wuwa_Mod_Fixer/raw/main/{file_name}"),
-        format!("https://raw.githubusercontent.com/Moonholder/Wuwa_Mod_Fixer/main/{file_name}"),
-    ];
+    let remotes = [format!(
+        "https://raw.githubusercontent.com/newaccforananta/Wuwa_Mod_Fixer_Fork/main/{file_name}"
+    )];
 
     let agent_ref = build_agent();
     let mut tasks = Vec::new();
