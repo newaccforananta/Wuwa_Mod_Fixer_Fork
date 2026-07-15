@@ -134,6 +134,10 @@ impl ModFixer {
                 hash_to_character.insert(replacement.new.clone(), char_name.clone());
             }
 
+            if config.strict_main_match {
+                continue;
+            }
+
             for (base_hash, node) in &config.textures {
                 hash_to_character.insert(base_hash.clone(), char_name.clone());
 
@@ -1591,8 +1595,48 @@ fn ensure_section_lines(content: &mut String, sections: &HashMap<String, Vec<Str
 
 #[cfg(test)]
 mod tests {
-    use super::ensure_section_lines;
+    use super::{ModFixer, ensure_section_lines};
+    use crate::AtomicProgress;
+    use crate::config_loader::{CharacterConfig, Replacement, TextureNode};
     use std::collections::HashMap;
+    use std::sync::Arc;
+    use std::sync::atomic::AtomicBool;
+
+    #[test]
+    fn strict_profiles_match_only_main_hashes() {
+        let characters = HashMap::from([(
+            "Weapon".to_owned(),
+            CharacterConfig {
+                main_hashes: vec![Replacement {
+                    old: vec!["oldmain1".to_owned()],
+                    new: "newmain1".to_owned(),
+                }],
+                textures: HashMap::from([(
+                    "newtex01".to_owned(),
+                    TextureNode {
+                        replace: vec!["oldtex01".to_owned()],
+                        ..Default::default()
+                    },
+                )]),
+                strict_main_match: true,
+                ..Default::default()
+            },
+        )]);
+        let fixer = ModFixer::new(
+            &characters,
+            true,
+            true,
+            false,
+            0,
+            Arc::new(AtomicProgress::new()),
+            Arc::new(AtomicBool::new(false)),
+        );
+
+        assert_eq!(fixer.hash_to_character.get("oldmain1"), Some(&"Weapon".to_owned()));
+        assert_eq!(fixer.hash_to_character.get("newmain1"), Some(&"Weapon".to_owned()));
+        assert!(!fixer.hash_to_character.contains_key("oldtex01"));
+        assert!(!fixer.hash_to_character.contains_key("newtex01"));
+    }
 
     #[test]
     fn ensures_missing_line_once_in_existing_section() {

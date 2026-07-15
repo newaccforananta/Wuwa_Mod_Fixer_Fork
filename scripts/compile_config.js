@@ -24,6 +24,10 @@ if (data && data.characters) {
         const charConfig = data.characters[charName];
         if (!charConfig) continue;
 
+        if (charConfig.strict_main_match !== undefined) {
+            charConfig.strict_main_match = (charConfig.strict_main_match === 'true');
+        }
+
         // 1. Convert meta.id back to Number
         if (charConfig.textures) {
             for (const texHash in charConfig.textures) {

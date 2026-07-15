@@ -1,7 +1,7 @@
 version:
   min_required_version: 3.3.3
-  current_version: 3.5.0
-  latest_program_version: 3.5.0
+  current_version: 3.5.1
+  latest_program_version: 3.5.1
   update_url: https://github.com/newaccforananta/Wuwa_Mod_Fixer_Fork/releases/latest
   support_url_cn: https://support.jix.de5.net
   support_url_intl: https://ko-fi.com/moonholder
@@ -33,14 +33,14 @@ lang:
   intro:
     zh: |+
       修复3.5: 请将XXMI更新至最新版本
-      * Augusta、Camellya、Cantarella、Cartethyia/Fleurdelys、Changli、Chisa
+      * Aemeath、Augusta、Camellya、Cantarella、Cartethyia/Fleurdelys、Changli、Chisa
       * Ciaccona、Denia、Encore、Galbrena、Hiyuki、Iuno
       * Lupa、Lynae、Phrolova、Roccia、Shorekeeper、Verina、Zani
       * 包含已验证的变身、潮湿、透明、武器和特效状态修复
 
     en: |+
       Fix 3.5: Please update XXMI to the latest version.
-      * Augusta, Camellya, Cantarella, Cartethyia/Fleurdelys, Changli, Chisa
+      * Aemeath, Augusta, Camellya, Cantarella, Cartethyia/Fleurdelys, Changli, Chisa
       * Ciaccona, Denia, Encore, Galbrena, Hiyuki, Iuno
       * Lupa, Lynae, Phrolova, Roccia, Shorekeeper, Verina, Zani
       * Includes verified transformation, wet, transparency, weapon, and effect-state fixes
@@ -169,49 +169,85 @@ characters:
     main_hashes:
       - {old: [2738a0f0], new: 8d8097bc}
     textures:
-      '75591798': {replace: [0454fc47], derive: {LOD: [e77fc955, f0987e14]}}
-      157217af: {replace: [0eb70c8f], derive: {LOD: [c82d8988, '603341e7']}}
-      1d31d19d: {derive: {LOD: [c06e4fba, 4e258e03]}}
-      2d9235e9: {derive: {LOD: [f0cdabce, e26a1cea]}}
-      2e5607c2: {derive: {LOD: [f30999e5, 9143d11b]}}
-      3a5a08ac: {derive: {LOD: [e705968b, 511eb4b1], Charged: [b944ac35, a4a79abf]}}
-      9c0c016b: {derive: {LOD: [41539f4c, 4e0b21a2]}}
-      34d0acfd: {derive: {LOD: [e98f32da, 0777afff]}}
-      182fc550: {derive: {LOD: ['9e790054', 972b84bf]}}
-      79081b2b: {derive: {LOD: [a457850c, 4db76b74]}}
-      aa4979ac: {derive: {LOD: [f08446f0, 5d17f4dc]}}
-      b3927ca5: {derive: {LOD: [6ecde282, 9692bd97]}}
-      d3387127: {derive: {LOD: [0e67ef00, 6da910f6]}}
-      e5bb71c0: {derive: {LOD: [63edb4c4, 8c13b3f3]}}
-      e341a037: {derive: {LOD: [3e1e3e10, 2fafc4cb]}}
-      2f18521b: {replace: [ec96a652], derive: {LOD: [bd3e8cd6, 98e03fc5]}}
-      ef5edd1b: {derive: {LOD: [3201433c, 1cff0950]}}
-      f58624fb: {derive: {LOD: [28d9badc, 1284c977], Charged: [f857b2b4, cf137770]}}
-      fda934b4: {derive: {LOD: [20f6aa93, 8ca059b1]}}
-      6cf0c8eb: {derive: {LOD: [b1af56cc, b57793cd]}}
-      898230f4: {derive: {LOD: [54ddaed3, 4e8c6aa3]}}
-      1944212c: {derive: {LOD: [c41bbf0b, c5673dfc]}}
+      aa69d267: {replace: [109cc560]}
+      262dd8c5: {replace: [34d0acfd]}
+      e6fbda6a: {replace: [8f535dff]}
+      08d1fee9: {replace: [12566ee7]}
+      7b4b87ee: {replace: [875a537d]}
+      58d2165a: {replace: [6cf0c8eb]}
+      69eee297: {replace: [764ddd34]}
+      ab9067bf: {replace: [913631e7]}
+      fcdd3e98: {replace: [9c0c016b]}
+      c6acaf94: {replace: [6a73cfad]}
+      c154eedc: {replace: [79081b2b]}
+      22932116: {replace: [f58624fb]}
+      c0c34a21: {replace: [fda934b4]}
+      a9c4f230: {replace: [1d31d19d]}
+      a506a70d: {replace: [8383cbbf]}
+      c6a3d0b6: {replace: [8b228d89]}
+      34897ad2: {replace: [d01d0380]}
+      1571587a: {replace: [e341a037]}
+      fcc6992c: {replace: [0454fc47, '75591798']}
+      dd8a4a66: {replace: [ddb38365]}
+      3e171584: {replace: [d256e174]}
+      18f84aa4: {replace: [182fc550]}
+      c045cf76: {replace: [0eb70c8f, 157217af]}
+      a576ce3e: {replace: [3a5a08ac]}
+      50522981: {replace: [b3927ca5]}
+      a76caeb5: {replace: [2d9235e9]}
+      7d54a0d5: {replace: [2e5607c2]}
+      3ce06c9a: {replace: [d3387127]}
+      970c252e: {replace: [f14c6a63]}
+      e9af6d61: {replace: [2f18521b, ec96a652]}
+      3db56e40: {replace: [613a4300]}
+      1ef5ad65: {replace: [98e4d102]}
   AemeathMecha:
     main_hashes:
       - {old: [ddc1947c], new: ddc1947c}
     vg_remaps:
       - {trigger_hash: [ddc1947c], vertex_groups: '184:186,185:184,186:185,193:195,194:193,195:194'}
     textures:
-      '58602994': {derive: {LOD: [853fb7b3, e5fdaede]}}
-      3d0413b6: {derive: {LOD: [e05b8d91, a69a0a57]}}
-      5c469503: {derive: {LOD: [81190b24, 761ead80]}}
-      08cbd7b6: {derive: {LOD: [9c0ed78d]}}
-      8d82b70f: {derive: {LOD: [50dd2928, 82253f52]}}
-      93c37d33: {derive: {LOD: [4e9ce314, ef13b200]}}
-      b5d87476: {derive: {LOD: [6887ea51, 001708a2]}}
-      bdcfd041: {derive: {LOD: ['60904e66', c33c322b]}}
-      d3a3850e: {derive: {LOD: [0efc1b29, 97c9f69a]}}
-      d69f8b70: {derive: {LOD: [0bc01557, 0aa05a59]}}
-      d95ba1d3: {derive: {LOD: [04043ff4, a3bf8960]}}
-      e444e470: {derive: {LOD: [391b7a57, 9718ce41]}}
-      e5914e49: {derive: {LOD: [38ced06e, cbf1af36]}}
-      e741396c: {derive: {LOD: [3a1ea74b, 3a9191dc]}}
-      f3517b3f: {derive: {LOD: [6177a5f2, 979fdac5]}}
+      94ede714: {replace: [08cbd7b6]}
+      19a9a9b9: {replace: [8d82b70f]}
+      cdc8e67b: {replace: [93c37d33]}
+      ed01e052: {replace: [bdcfd041]}
+      49470610: {replace: [e741396c]}
+      64354f07: {replace: [d3a3850e]}
+      082336ce: {replace: [e444e470]}
+      83df3199: {replace: [b5d87476]}
+      50915a93: {replace: [d69f8b70]}
+      4a0365ff: {replace: [e5914e49]}
+      482fd763: {replace: ['58602994']}
+      6650a975: {replace: [3d0413b6]}
+      11555cd8: {replace: [d95ba1d3]}
+      f9f7219e: {replace: [0ff7625a]}
+      ab9067bf: {replace: [913631e7]}
+      58d2165a: {replace: [6cf0c8eb]}
+  AemeathMechaSpear:
+    strict_main_match: true
+    main_hashes:
+      - {old: [538c8667], new: 538c8667}
+    textures:
+      93be2368: {replace: [5c469503]}
+      a1e2e0cd: {replace: [aefdd4ec]}
+      4069afd9: {replace: [fb3b2312]}
+      449a1d2c: {replace: [d4a876d0]}
+      37695d43: {replace: [9348c975]}
+  AemeathMicrophone:
+    strict_main_match: true
+    main_hashes:
+      - {old: [653db522], new: 653db522}
+    textures:
+      9934ca23: {replace: [e248ecf4]}
+  AemeathSigWeaponSword:
+    strict_main_match: true
+    main_hashes:
+      - {old: [a293fdab], new: a293fdab}
+    textures:
+      2e6793d3: {replace: [1445e3b2]}
+      7639376c: {replace: [7b2faa9f]}
+      57ebdcbd: {replace: [f1f03f66]}
+      d365c42f: {replace: [9291bb0b]}
   Ages_of_Harvest:
     main_hashes:
       - {old: [1408f42b], new: 1408f42b}

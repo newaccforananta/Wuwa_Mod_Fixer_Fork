@@ -42,6 +42,7 @@ pub struct SettingConfig {
 pub struct CharacterConfig {
     pub main_hashes: Vec<Replacement>,
     pub textures:    HashMap<String, TextureNode>,
+    pub strict_main_match: bool,
     pub checksum:    Option<String>,
     pub rules:       Option<Vec<ReplacementRule>>,
     pub ensure_lines: HashMap<String, Vec<String>>,
