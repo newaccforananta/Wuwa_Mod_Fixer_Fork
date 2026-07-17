@@ -33,14 +33,14 @@ lang:
   intro:
     zh: |+
       修复3.5: 请将XXMI更新至最新版本
-      * Aemeath、Augusta、Camellya、Cantarella、Carlotta、Cartethyia/Fleurdelys、Changli、Chisa
+      * Aemeath、Augusta、Baizhi、Buling、Camellya、Cantarella、Carlotta、Cartethyia/Fleurdelys、Changli、Chisa
       * Ciaccona、Denia、Encore、Galbrena、Hiyuki、Iuno、Jinhsi
       * Lupa、Lynae、Mornye、Phrolova、Roccia、Shorekeeper、Sigrika、Verina、Zani
       * 包含已验证的变身、潮湿、透明、武器和特效状态修复
 
     en: |+
       Fix 3.5: Please update XXMI to the latest version.
-      * Aemeath, Augusta, Camellya, Cantarella, Carlotta, Cartethyia/Fleurdelys, Changli, Chisa
+      * Aemeath, Augusta, Baizhi, Buling, Camellya, Cantarella, Carlotta, Cartethyia/Fleurdelys, Changli, Chisa
       * Ciaccona, Denia, Encore, Galbrena, Hiyuki, Iuno, Jinhsi
       * Lupa, Lynae, Mornye, Phrolova, Roccia, Shorekeeper, Sigrika, Verina, Zani
       * Includes verified transformation, wet, transparency, weapon, and effect-state fixes
@@ -287,22 +287,27 @@ characters:
   Baizhi:
     main_hashes:
       - {old: [4a2b2eca], new: 3cb91e7f}
+      - {old: [c1f5ba6e], new: 0dd13643}
       - {old: [d8d2286b], new: d8d2286b}
     vg_remaps:
       - {trigger_hash: [37bed36b, 4a2b2eca], vertex_groups: '17:20,18:21,19:18,20:19,21:17,51:53,52:51,53:52,84:85,85:87,86:88,87:89,88:84,89:86,119:122,120:121,121:119,122:120,123:128,124:129,125:126,126:125,127:123,128:124,129:127,133:136,134:137,135:133,136:140,137:141,138:142,139:134,140:135,141:138,142:139', component_remap: [{component_index: '0', indices: '17:20,18:21,19:18,20:19,21:17'}, {component_index: '3', indices: '14:16,15:14,16:15,47:48,48:50,49:51,50:52,51:47,52:49,82:85,83:84,84:82,85:83,86:91,87:92,88:89,89:88,90:86,91:87,92:90,96:99,97:100,98:96,99:103,100:104,101:105,102:97,103:98,104:101,105:102'}, {component_index: '4', indices: '17:21,18:19,19:17,20:18,21:20'}]}
     textures:
-      0be38d62: {replace: [37bed36b, 718456ac], derive: {LOD: [b64abc3f]}}
-      060f40ba: {replace: [52c9b804, d7756134], derive: {LOD: [9e69b7cc]}}
-      43ae1deb: {replace: [1a09bbb5]}
-      fe4e4afe: {replace: [d755a4a9]}
-      f0f101b3: {replace: ['7404e947'], derive: {LOD: [588b7355]}}
-      64b13efd: {replace: [804d32e9], derive: {LOD: [fcb7c144]}}
-      4e4d79b9: {replace: [7c460f02], derive: {LOD: [a3636075]}}
-      cac210d5: {replace: [2b7eb01d], derive: {LOD: [7bb1d2b3]}}
-      afe67129: {replace: [64cc6fa8], derive: {LOD: [a749359c]}}
-      ff9b6df0: {replace: [6f238044], derive: {LOD: [3dd54744]}}
-      a2315519: {replace: ['91754701'], derive: {LOD: [b07a8f0c]}}
-      39b39c99: {replace: [49a71537], derive: {LOD: [5448a8ae]}}
+      f53d53ca: {replace: ['7404e947', f0f101b3], derive: {LOD: [a92a7943]}}
+      c04e0311: {replace: [1a09bbb5, 43ae1deb]}
+      5764478b: {replace: [3cd03f60]}
+      106fd273: {replace: [49a71537, 39b39c99], derive: {STATE: [da215338], LOD: [99438a80]}}
+      a506a70d: {replace: [8383cbbf]}
+      a8ea4254: {replace: [7c460f02, 4e4d79b9], derive: {LOD: [8739f20d]}}
+      96e747e9: {replace: [d755a4a9, fe4e4afe]}
+      aec13ff5: {replace: [804d32e9, 64b13efd], derive: {LOD: [161fec0c]}}
+      f5e98cc7: {replace: [2adec21b], derive: {IDLE: [60920a8e]}}
+      584a35b7: {replace: [2b7eb01d, cac210d5], derive: {IDLE: [54c26acc]}}
+      041cc54f: {replace: [64cc6fa8, afe67129]}
+      991a236f: {replace: [37bed36b, 718456ac, 0be38d62], derive: {IDLE: [3518c8d6]}}
+      5c7233ee: {replace: [6f238044, ff9b6df0]}
+      c1ab535d: {replace: ['91754701', a2315519], derive: {IDLE: [cb1e6430]}}
+      fd6bb9d4: {replace: [52c9b804, d7756134, 060f40ba], derive: {IDLE: [954a4434]}}
+      f37a20ec: {replace: [e6d4c134, 183ebf78], derive: {IDLE: [ca813782]}}
   BaizhiPet:
     main_hashes:
       - {old: [6bf5ce94], new: 6bf5ce94}
@@ -349,19 +354,20 @@ characters:
     main_hashes:
       - {old: [3acffb93], new: 3acffb93}
     textures:
-      8dee1ac6: {meta: {id: '0', type: D}, derive: {LOD: [50b184e1, 1e562d6e]}}
-      84912b43: {meta: {id: '0', type: L}}
-      40adbec5: {meta: {id: '1', type: D}, derive: {LOD: [9df220e2, 94871d13]}}
-      a982c93c: {meta: {id: '1', type: L}}
-      0d688c94: {meta: {id: '2', type: D}, derive: {LOD: [d03712b3, 39c0488d]}}
-      d9d80742: {meta: {id: '2', type: L}}
-      d8a68207: {meta: {id: '3', type: D}, derive: {LOD: [05f91c20, cd5d36e7]}}
-      a24f738d: {meta: {id: '3', type: L}}
-      df9f758a: {meta: {id: '3', type: 'N'}, derive: {LOD: [02c0ebad, ca1d18db]}}
-      23966ca8: {meta: {id: '4', type: D}, derive: {LOD: [fec9f28f, c19451c3]}}
-      2c292a15: {meta: {id: '4', type: L}}
-      01375d8e: {meta: {id: '4', type: 'N'}, derive: {LOD: [dc68c3a9, '1224e241']}}
-      5863867a: {meta: {id: '5', type: D}, derive: {LOD: [853c185d, f41f978b]}}
+      ed1b3b98: {meta: {id: '0', type: D}, replace: [8dee1ac6], derive: {LOD: [ed1b3b98], LIBERATION: [30e3b277]}}
+      28d5d78d: {meta: {id: '0', type: L}, replace: [84912b43], derive: {LOD: [28d5d78d]}}
+      e8239652: {meta: {id: '1', type: D}, replace: [40adbec5], derive: {LOD: [e8239652], LIBERATION: [6864fc55]}}
+      79a71362: {meta: {id: '1', type: L}, replace: [a982c93c], derive: {LOD: [79a71362]}}
+      45d35731: {meta: {id: '2', type: D}, replace: [0d688c94], derive: {LOD: [45d35731], LIBERATION: [56e9ed7d]}}
+      c227c2a3: {meta: {id: '2', type: L}, replace: [d9d80742], derive: {LOD: [c227c2a3], LIBERATION: [47e1a57c]}}
+      639eca5c: {meta: {id: '3', type: D}, replace: [d8a68207], derive: {LOD: [639eca5c], LIBERATION: [bddb229f]}}
+      941882d0: {meta: {id: '3', type: L}, replace: [a24f738d], derive: {LOD: [941882d0]}}
+      a87fd8ee: {meta: {id: '3', type: 'N'}, replace: [df9f758a], derive: {LOD: [a87fd8ee], LIBERATION: [67983f27]}}
+      013ef60f: {meta: {id: '4', type: D}, replace: [23966ca8], derive: {LOD: [013ef60f], LIBERATION: [35b32c00]}}
+      f1386e33: {meta: {id: '4', type: L}, replace: [2c292a15], derive: {LOD: [f1386e33], LIBERATION: [8e077277]}}
+      2aaff706: {meta: {id: '4', type: 'N'}, replace: [01375d8e], derive: {LOD: [2aaff706], LIBERATION: [aacf394e]}}
+      d28ef811: {meta: {id: '5', type: D}, replace: [5863867a], derive: {LOD: [d28ef811], LIBERATION: [483210ae]}}
+      5764478b: {replace: [1dcc0f1d], derive: {LOD: [5764478b]}}
   CalcharoBody:
     main_hashes:
       - {old: ['63e02559'], new: '63e02559'}
@@ -634,19 +640,24 @@ characters:
       - {old: [1606ae41], new: 1606ae41}
       - {old: [9b69878e], new: 9b69878e}
     textures:
-      ab72381e: {replace: [eee73787]}
-      7988637b: {replace: [45e0cedb], derive: {LOD: [679b50e1]}}
-      94afca13: {replace: [489b5f2a], derive: {LOD: [506c16fd]}}
-      94d10f56: {replace: [cb974015]}
-      873ca04e: {replace: [ba246036], derive: {LOD: [dd80f74a]}}
+      ff5dd065: {meta: {id: '0', type: 'N'}, replace: [ab72381e, eee73787], derive: {LOD: [ff5dd065]}}
+      ac25e938: {meta: {id: '0', type: D}, replace: [75333d76, 8f423e37], derive: {LOD: [ac25e938], LIBERATION: [cfd3e3b7]}}
+      c7bae5ec: {meta: {id: '1', type: D}, replace: [873ca04e, ba246036], derive: {LOD: [c7bae5ec], LIBERATION: [4774d118]}}
+      02ab092c: {meta: {id: '2', type: L}, replace: [94d10f56, cb974015], derive: {LOD: [02ab092c], LIBERATION: [b2ce9b20]}}
+      05034871: {meta: {id: '2', type: D}, replace: [d51104f6, f6fed778, 9497a1b9], derive: {LOD: [05034871], LIBERATION: [26c773bc]}}
+      07686574: {replace: [a7fa522d, 3a8fbe39], derive: {LOD: [07686574]}}
+      8a194f30: {meta: {id: '3', type: 'N'}, replace: [8080d570, e29e63d6], derive: {LOD: [8a194f30], LIBERATION: [fba66905]}}
+      aef5145f: {meta: {id: '3', type: L}, replace: [1436df36], derive: {LOD: [aef5145f], LIBERATION: [551cdc33]}}
+      9bed6971: {meta: {id: '3', type: D}, replace: [94afca13, 489b5f2a, 506c16fd], derive: {LOD: [9bed6971], LIBERATION: [15d237fa]}}
+      29691de5: {meta: {id: '4', type: L}, replace: [3d50aa1d], derive: {LOD: [29691de5], LIBERATION: [64ca4980]}}
+      77914ca3: {meta: {id: '4', type: 'N'}, replace: [cb71b417, ab057c17, '28269327'], derive: {LOD: [77914ca3], LIBERATION: [07e9119a]}}
+      656e72fb: {meta: {id: '4', type: D}, replace: [7988637b, 45e0cedb, 679b50e1], derive: {LOD: [656e72fb], LIBERATION: [ee80430d]}}
+      cc5c0ab7: {replace: [c26ba661, a42f5c9d], derive: {LOD: [cc5c0ab7]}}
+      6bf7a371: {meta: {id: '5', type: D}, replace: [ebe1f999, 9f2544e0, ba59a51d], derive: {LOD: [6bf7a371]}}
+      a506a70d: {replace: [8383cbbf]}
+      5764478b: {replace: [1dcc0f1d], derive: {LOD: [5764478b]}}
+      bb73967a: {replace: [f47bc395]}
       a7141c04: {replace: [4a2657d7]}
-      d51104f6: {replace: [f6fed778, 9497a1b9], derive: {LOD: [2c2d42eb]}}
-      75333d76: {replace: [8f423e37], derive: {LOD: [faf0529c]}}
-      cb71b417: {replace: [ab057c17], derive: {LOD: ['28269327']}}
-      8080d570: {replace: [e29e63d6], derive: {LOD: [bf5b4997]}}
-      ebe1f999: {replace: [9f2544e0], derive: {LOD: [ba59a51d]}}
-      a7fa522d: {derive: {LOD: [3a8fbe39]}}
-      c26ba661: {derive: {LOD: [a42f5c9d]}}
   Ciaccona:
     main_hashes:
       - {old: [e57c9380], new: e57c9380}
