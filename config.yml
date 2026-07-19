@@ -170,37 +170,43 @@ characters:
       - {old: [2738a0f0], new: 8d8097bc}
     textures:
       aa69d267: {replace: [109cc560]}
-      262dd8c5: {replace: [34d0acfd]}
+      262dd8c5: {replace: [34d0acfd], derive: {LOD: [b399a4b3, fc3ad0a1]}}
       e6fbda6a: {replace: [8f535dff]}
       08d1fee9: {replace: [12566ee7]}
-      7b4b87ee: {replace: [875a537d]}
-      58d2165a: {replace: [6cf0c8eb]}
-      69eee297: {replace: [764ddd34]}
+      7b4b87ee: {replace: [875a537d], derive: {LOD: [0ed7af85]}}
+      58d2165a: {replace: [6cf0c8eb], derive: {LOD: [706ce698, c7c9495d]}}
+      69eee297: {replace: [764ddd34], derive: {LOD: [fd84b3ac]}}
       ab9067bf: {replace: [913631e7]}
-      fcdd3e98: {replace: [9c0c016b]}
-      c6acaf94: {replace: [6a73cfad]}
-      c154eedc: {replace: [79081b2b]}
-      22932116: {replace: [f58624fb]}
-      c0c34a21: {replace: [fda934b4]}
-      a9c4f230: {replace: [1d31d19d]}
+      fcdd3e98: {replace: [9c0c016b], derive: {LOD: [5551e8d7, f14b3aff]}}
+      c6acaf94: {replace: [6a73cfad], derive: {LOD: [6d98ab63]}}
+      c154eedc: {replace: [79081b2b], derive: {LOD: [c90fd734, 9019140d]}}
+      22932116: {replace: [f58624fb], derive: {LOD: [1fd24d90, eaeb3da8]}}
+      c0c34a21: {replace: [fda934b4], derive: {LOD: [b59a10c8]}}
+      a9c4f230: {replace: [1d31d19d], derive: {LOD: [b02c8f87, f5f2a22d]}}
       a506a70d: {replace: [8383cbbf]}
       c6a3d0b6: {replace: [8b228d89]}
       34897ad2: {replace: [d01d0380]}
-      1571587a: {replace: [e341a037]}
-      fcc6992c: {replace: [0454fc47, '75591798']}
-      dd8a4a66: {replace: [ddb38365]}
+      1571587a: {replace: [e341a037], derive: {LOD: [0af03518, 5b40a793]}}
+      fcc6992c: {replace: [0454fc47, '75591798'], derive: {LOD: [2711d6ed, a044142b]}}
+      dd8a4a66: {replace: [ddb38365], derive: {LOD: [6fb61440]}}
       3e171584: {replace: [d256e174]}
       18f84aa4: {replace: [182fc550]}
-      c045cf76: {replace: [0eb70c8f, 157217af]}
-      a576ce3e: {replace: [3a5a08ac]}
-      50522981: {replace: [b3927ca5]}
-      a76caeb5: {replace: [2d9235e9]}
-      7d54a0d5: {replace: [2e5607c2]}
+      c045cf76: {replace: [0eb70c8f, 157217af], derive: {LOD: [c33d1139, b4b164e0]}}
+      a576ce3e: {replace: [3a5a08ac], derive: {LOD: [7e6c8d99, 23a48f0b]}}
+      50522981: {replace: [b3927ca5], derive: {LOD: [f225423f, 14b9d706]}}
+      a76caeb5: {replace: [2d9235e9], derive: {LOD: [5015b951, 21f12063]}}
+      7d54a0d5: {replace: [2e5607c2], derive: {LOD: [03fccdfa, 02e13b14]}}
       3ce06c9a: {replace: [d3387127]}
-      970c252e: {replace: [f14c6a63]}
-      e9af6d61: {replace: [2f18521b, ec96a652]}
+      970c252e: {replace: [f14c6a63], derive: {LOD: [a16c5306]}}
+      e9af6d61: {replace: [2f18521b, ec96a652], derive: {LOD: [2abd8735, 207bfe32]}}
       3db56e40: {replace: [613a4300]}
-      1ef5ad65: {replace: [98e4d102]}
+      1ef5ad65: {replace: [98e4d102], derive: {LOD: [1b637af0, 5fe4371b]}}
+      01ab5803: {derive: {LOD: [aa17d690, 9e29af8a]}}
+      1a5519a5: {derive: {LOD: [679e4e43, 87c7fc93]}}
+      4e8c6aa3: {derive: {LOD: [8cca224c]}}
+      7a909b49: {derive: {LOD: [ab4a6311]}}
+      877f231c: {derive: {LOD: [cb560dda]}}
+      c5673dfc: {derive: {LOD: [9a3974b6]}}
   AemeathMecha:
     main_hashes:
       - {old: [ddc1947c], new: ddc1947c}
@@ -222,7 +228,7 @@ characters:
       11555cd8: {replace: [d95ba1d3]}
       f9f7219e: {replace: [0ff7625a]}
       ab9067bf: {replace: [913631e7]}
-      58d2165a: {replace: [6cf0c8eb]}
+      58d2165a: {replace: [6cf0c8eb], derive: {LOD: [706ce698, c7c9495d]}}
   AemeathMechaSpear:
     strict_main_match: true
     main_hashes:
